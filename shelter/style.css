@@ -1,3 +1,64 @@
+.header-container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.logo-bright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  height: 60px;
+  text-decoration: none;
+}
+.logo-bright .logo-title {
+  font-size: 32px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+}
+.logo-bright .logo-subtitle {
+  margin-left: 4px;
+  font-family: "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
+
+.nav-menu-bright {
+  width: 443px;
+  height: 27px;
+  margin-top: 16px;
+}
+.nav-menu-bright .nav-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.nav-menu-bright .nav-list .nav-link {
+  position: relative;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  transition: color 0.3s;
+}
+.nav-menu-bright .nav-list .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -7px;
+  height: 3px;
+  background: #F1CDB3;
+  transition: left 0.5s, right 0.5s;
+}
+.nav-menu-bright .nav-list > :first-child .nav-link::after, .nav-menu-bright .nav-list .nav-link:hover::after {
+  left: 0;
+  right: 0;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -329,7 +390,44 @@ html {
 }
 
 body {
+  display: inline-block;
+  min-width: 100%;
   font-family: "Georgia", serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.start-screen-gradient-background-container {
+  height: 908px;
+  background: url("assets/images/noise_transparent@2x.png"), radial-gradient(120% 220% at 0% 0%, #5B483A 0%, #262425 70%), #211F20;
+}
+
+.header-container {
+  padding-top: 30px;
+}
+
+.logo-and-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 1200px;
+}
+
+.logo-bright .logo-title {
+  color: #F1CDB3;
+}
+.logo-bright .logo-subtitle {
+  color: #FFFFFF;
+}
+
+.nav-menu-bright .nav-link {
+  color: #CDCDCD;
+}
+.nav-menu-bright .nav-list > :first-child .nav-link, .nav-menu-bright .nav-link:hover {
+  color: #FAFAFA;
 }
 
 /*# sourceMappingURL=style.css.map */

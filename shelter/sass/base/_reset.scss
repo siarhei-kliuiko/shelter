@@ -7,5 +7,12 @@ html {
 }
 
 body {
-    font-family: 'Georgia', serif;
+    display: inline-block;
+    min-width: 100%;
+    font-family: "Georgia", serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }

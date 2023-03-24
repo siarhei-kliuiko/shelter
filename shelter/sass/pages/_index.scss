@@ -1,0 +1,23 @@
+.logo-bright {
+    @extend %logo;
+
+    & .logo-title {
+        color: $color-primary;
+    }
+
+    & .logo-subtitle {
+        color: $color-light-xl;
+    }
+}
+
+.nav-menu-bright {
+    @extend %nav-menu;
+
+    & .nav-link {
+        color: $color-light-l;
+    }
+
+    & .nav-list > :first-child .nav-link, & .nav-link:hover {
+        color: $color-light-s;
+    }
+}
