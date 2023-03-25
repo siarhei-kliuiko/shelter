@@ -64,3 +64,44 @@
         }
     }
 }
+
+%title {
+    margin: 0;
+    font-weight: 400;
+}
+
+%button {
+    cursor: pointer;
+    padding: 13px 43px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-dark-3xl;
+    fill: $color-dark-3xl;
+    transition: background-color .2s, border-color .2s;
+}
+
+%button-interactive {
+    @extend %button;
+
+    &:hover {
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+    }
+}
+
+%button-inactive {
+    @extend %button;
+    border-color: $color-dark-s;
+    color: $color-dark-s;
+    fill: $color-dark-s;
+}
+
+%button-active {
+    @extend %button;
+    background-color: $color-primary;
+    color: $color-dark-s;
+    fill: $color-dark-s;
+}

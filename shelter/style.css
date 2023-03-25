@@ -59,6 +59,29 @@
   right: 0;
 }
 
+.not-only-title {
+  margin: 0;
+  font-weight: 400;
+}
+
+.not-only-button {
+  cursor: pointer;
+  padding: 13px 43px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  fill: #292929;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.not-only-button:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -414,6 +437,39 @@ ul {
   justify-content: space-between;
   align-items: start;
   width: 1200px;
+}
+
+.not-only {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+
+.not-only-content {
+  margin-top: 163px;
+  width: 460px;
+  height: 322px;
+}
+
+.not-only-title {
+  margin-top: 1px;
+  font-size: 44px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.not-only-text {
+  margin: 41px 0 42px 0;
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+}
+
+.not-only-button {
+  background-color: #F1CDB3;
+  /*width: 207px;
+  height: 52px;*/
 }
 
 .logo-bright .logo-title {
