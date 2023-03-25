@@ -105,3 +105,18 @@
     color: $color-dark-s;
     fill: $color-dark-s;
 }
+
+%second-title {
+    @extend %title;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}
+
+%about-text {
+    margin: 0;
+    font-family: $font-arial-normal;
+    font-size: 15px;
+    line-height: 160%;
+}

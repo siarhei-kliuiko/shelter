@@ -2,3 +2,9 @@
     @extend %container;
     padding-top: 30px;
 }
+
+.about-container {
+    @extend %container;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}

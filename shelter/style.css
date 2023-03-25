@@ -1,4 +1,4 @@
-.header-container {
+.about-container, .header-container {
   width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
@@ -59,7 +59,7 @@
   right: 0;
 }
 
-.not-only-title {
+.not-only-title, .about-title {
   margin: 0;
   font-weight: 400;
 }
@@ -80,6 +80,20 @@
 .not-only-button:hover {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
+}
+
+.about-title {
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.about-text2, .about-text1 {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 160%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -428,8 +442,18 @@ ul {
   background: url("assets/images/noise_transparent@2x.png"), radial-gradient(120% 220% at 0% 0%, #5B483A 0%, #262425 70%), #211F20;
 }
 
+.about-background-container {
+  height: 588px;
+  background: #FFFFFF;
+}
+
 .header-container {
   padding-top: 30px;
+}
+
+.about-container {
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .logo-and-menu {
@@ -468,8 +492,30 @@ ul {
 
 .not-only-button {
   background-color: #F1CDB3;
-  /*width: 207px;
-  height: 52px;*/
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 175px;
+}
+
+.about-text-content {
+  width: 430px;
+  height: 380px;
+}
+
+.about-title {
+  width: 370px;
+}
+
+.about-text1 {
+  padding: 24px 0;
+}
+
+.about-text2 {
+  padding-top: 1px;
 }
 
 .logo-bright .logo-title {

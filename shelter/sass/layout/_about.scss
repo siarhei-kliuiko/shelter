@@ -1,0 +1,26 @@
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 175px;
+}
+
+.about-text-content {
+    width: 430px;
+    height: 380px;
+}
+
+.about-title {
+    @extend %second-title;
+    width: 370px;
+}
+
+.about-text1 {
+    @extend %about-text;
+    padding: 24px 0;
+}
+
+.about-text2 {
+    @extend %about-text;
+    padding-top: 1px;
+}
