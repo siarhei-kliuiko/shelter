@@ -1,4 +1,4 @@
-.main-container, .header-container {
+.footer-container, .main-container, .header-container {
   width: 1280px;
   height: 100%;
   margin: 0 auto;
@@ -63,11 +63,9 @@
   right: 0;
 }
 
-.not-only-title, .donation-information, .pet-card-title, .donation-number, .contribution-title, .in-addition-title, .help-title, .our-friends-title, .about-title {
+.not-only-title, .donation-information, .pet-card-title, .contacts-link, .donation-number, .contribution-title, .contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-title {
   margin: 0;
   font-weight: 400;
-  letter-spacing: 0.06em;
-  color: #545454;
 }
 
 .pet-card-learn-more, .button-interactive-small, .button-interactive-wide-no-background, .button-interactive-wide {
@@ -107,9 +105,11 @@
   height: 52px;
 }
 
-.in-addition-title, .help-title, .our-friends-title, .about-title {
+.contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-title {
   font-size: 35px;
   line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .about-text2, .about-text1 {
@@ -119,14 +119,18 @@
   line-height: 160%;
 }
 
-.pet-card-title, .donation-number, .contribution-title {
+.pet-card-title, .contacts-link, .donation-number, .contribution-title {
   font-size: 20px;
   line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .donation-information {
   font-size: 15px;
   line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -495,6 +499,11 @@ ul {
   background: #F6F6F6;
 }
 
+.footer-gradient-background-container {
+  height: 350px;
+  background: url(assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
 .header-container {
   padding-top: 30px;
 }
@@ -507,6 +516,10 @@ ul {
 .in-addition-container {
   padding-left: 183px;
   padding-right: 182px;
+}
+
+.footer-container {
+  padding-top: 40px;
 }
 
 .logo-and-menu {
@@ -749,6 +762,56 @@ ul {
   font-size: 12px;
   line-height: 18px;
   color: #B2B2B2;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 234px;
+  margin-top: 16px;
+}
+
+.contacts {
+  width: fit-content;
+}
+
+.locations {
+  width: 302px;
+}
+
+.contacts-title {
+  height: 90px;
+  color: #FFFFFF;
+}
+
+.locations-title {
+  position: relative;
+  left: 1px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  color: #F1CDB3;
+  text-decoration: none;
+}
+.contacts-link svg {
+  flex: 0 0 auto;
+  fill: #F1CDB3;
+}
+.contacts-link .contacts-link-text {
+  margin-left: 20px;
+}
+
+.first-address {
+  position: relative;
+  top: 1px;
 }
 
 .button-interactive-wide {

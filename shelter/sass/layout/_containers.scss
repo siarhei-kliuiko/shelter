@@ -13,3 +13,8 @@
     padding-left: 183px;
     padding-right: 182px;
 }
+
+.footer-container {
+    @extend %container;
+    padding-top: 40px;
+}

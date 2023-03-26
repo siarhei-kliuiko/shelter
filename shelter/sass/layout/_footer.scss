@@ -1,0 +1,53 @@
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 234px;
+    margin-top: 16px;
+}
+
+.contacts {
+    width: fit-content;
+}
+
+.locations {
+    width: 302px;
+}
+
+.contacts-title {
+    @extend %second-title;
+    height: 90px;
+    color: $color-light-xl;
+}
+
+.locations-title {
+    position: relative;
+    left: 1px;
+}
+
+.contacts-link {
+    @extend %third-title;
+    display: flex;
+    align-items: center;
+    color: $color-primary;
+    text-decoration: none;
+
+    & svg {
+        flex: 0 0 auto;
+        fill: $color-primary;
+    }
+
+    & .contacts-link-text {
+        margin-left: 20px;
+    }
+}
+
+.first-address {
+    position: relative;
+    top: 1px;
+}
