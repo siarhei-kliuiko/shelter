@@ -64,9 +64,8 @@
   font-weight: 400;
 }
 
-.not-only-button {
+.button-interactive-wide {
   cursor: pointer;
-  padding: 13px 43px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   font-size: 17px;
@@ -74,12 +73,19 @@
   letter-spacing: 0.06em;
   color: #292929;
   fill: #292929;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, filter 0.2s;
 }
 
-.not-only-button:hover {
+.button-interactive-wide:hover {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
+}
+.button-interactive-wide:active {
+  filter: brightness(70%);
+}
+
+.button-interactive-wide {
+  padding: 13px 43px;
 }
 
 .about-title {
@@ -491,10 +497,6 @@ ul {
   color: #CDCDCD;
 }
 
-.not-only-button {
-  background-color: #F1CDB3;
-}
-
 .about-content {
   display: flex;
   justify-content: space-between;
@@ -517,6 +519,10 @@ ul {
 
 .about-text2 {
   padding-top: 1px;
+}
+
+.button-interactive-wide {
+  background-color: #F1CDB3;
 }
 
 .logo-bright .logo-title {

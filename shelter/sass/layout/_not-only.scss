@@ -26,8 +26,3 @@
     line-height: 160%;
     color: $color-dark-s;
 }
-
-.not-only-button {
-    @extend %button-interactive;
-    background-color: $color-primary;
-}

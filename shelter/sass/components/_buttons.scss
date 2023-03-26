@@ -1,0 +1,6 @@
+
+.button-interactive-wide {
+    @extend %button-interactive;
+    @extend %button-wide;
+    background-color: $color-primary;
+}
