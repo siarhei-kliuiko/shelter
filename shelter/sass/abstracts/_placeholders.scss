@@ -1,5 +1,6 @@
 %container {
     width: 1280px;
+    height: 100%;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -149,4 +150,12 @@
     font-size: 15px;
     line-height: 160%;
     color: $color-dark-xl;
+}
+
+%third-title {
+    @extend %title;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
 }

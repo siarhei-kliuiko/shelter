@@ -1,0 +1,134 @@
+.help-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.help-title {
+    @extend %second-title;
+    position: relative;
+    left: 1px;
+    width: 380px;
+    height: 90px;
+    text-align: center;
+}
+
+.contributions-list {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    height: 281px;
+    width: 1026px;
+    column-gap: 120px;
+    list-style: none;
+}
+
+.contribution-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 113px;
+}
+
+.contribution-image {
+    fill: $color-primary;
+}
+
+.contribution-title {
+    @extend %third-title;
+    white-space: nowrap;
+}
+
+.pet-food {
+    & .contribution-title {
+        width: 82px;
+    }
+    /*position: relative;
+    left: 2px;
+
+   & .contribution-image {
+        position: relative;
+        left: -1px;
+    }*/
+}
+
+.transportation {
+    & .contribution-image {
+        position: relative;
+        left: -1px;
+    }
+
+    & .contribution-title {
+        width: 150px;
+    }
+}
+
+.toys {
+    & .contribution-title {
+        width: 46px;
+    }
+}
+
+.bowls {
+    & .contribution-image {
+        margin-top: 2px;
+    }
+
+    & .contribution-title {
+        width: 153px;
+    }
+}
+
+.shampoos {
+    & .contribution-image {
+        position: relative;
+        left: -1px;
+    }
+
+    & .contribution-title {
+        width: 101px;
+    }
+}
+
+.vitamins {
+    & .contribution-image {
+        position: relative;
+        margin-top: 3px;
+        left: -1px;
+    }
+
+    & .contribution-title {
+        width: 89px;
+    }
+}
+
+.medicines {
+    & .contribution-title {
+        width: 101px;
+    }
+}
+
+.collars {
+    & .contribution-image {
+        margin-top: 4px;
+    }
+
+    & .contribution-title {
+        width: 165px;
+    }
+}
+
+.sleeping-areas {
+    & .contribution-image {
+        position: relative;
+        left: 1px;
+    }
+
+    & .contribution-title {
+        width: 143px;
+    }
+}

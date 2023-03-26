@@ -1,5 +1,6 @@
 .main-container, .header-container {
   width: 1280px;
+  height: 100%;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -62,7 +63,7 @@
   right: 0;
 }
 
-.pet-card-title, .not-only-title, .our-friends-title, .about-title {
+.not-only-title, .pet-card-title, .contribution-title, .help-title, .our-friends-title, .about-title {
   margin: 0;
   font-weight: 400;
 }
@@ -104,7 +105,7 @@
   height: 52px;
 }
 
-.our-friends-title, .about-title {
+.help-title, .our-friends-title, .about-title {
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
@@ -117,6 +118,13 @@
   font-size: 15px;
   line-height: 160%;
   color: #4C4C4C;
+}
+
+.pet-card-title, .contribution-title {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -475,6 +483,11 @@ ul {
   background: #F6F6F6;
 }
 
+.help-background-container {
+  height: 611px;
+  background: #FFFFFF;
+}
+
 .header-container {
   padding-top: 30px;
 }
@@ -578,6 +591,117 @@ ul {
   left: 1px;
 }
 
+.help-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.help-title {
+  position: relative;
+  left: 1px;
+  width: 380px;
+  height: 90px;
+  text-align: center;
+}
+
+.contributions-list {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+  height: 281px;
+  width: 1026px;
+  column-gap: 120px;
+  list-style: none;
+}
+
+.contribution-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 113px;
+}
+
+.contribution-image {
+  fill: #F1CDB3;
+}
+
+.contribution-title {
+  white-space: nowrap;
+}
+
+.pet-food {
+  /*position: relative;
+   left: 2px;
+
+  & .contribution-image {
+       position: relative;
+       left: -1px;
+   }*/
+}
+.pet-food .contribution-title {
+  width: 82px;
+}
+
+.transportation .contribution-image {
+  position: relative;
+  left: -1px;
+}
+.transportation .contribution-title {
+  width: 150px;
+}
+
+.toys .contribution-title {
+  width: 46px;
+}
+
+.bowls .contribution-image {
+  margin-top: 2px;
+}
+.bowls .contribution-title {
+  width: 153px;
+}
+
+.shampoos .contribution-image {
+  position: relative;
+  left: -1px;
+}
+.shampoos .contribution-title {
+  width: 101px;
+}
+
+.vitamins .contribution-image {
+  position: relative;
+  margin-top: 3px;
+  left: -1px;
+}
+.vitamins .contribution-title {
+  width: 89px;
+}
+
+.medicines .contribution-title {
+  width: 101px;
+}
+
+.collars .contribution-image {
+  margin-top: 4px;
+}
+.collars .contribution-title {
+  width: 165px;
+}
+
+.sleeping-areas .contribution-image {
+  position: relative;
+  left: 1px;
+}
+.sleeping-areas .contribution-title {
+  width: 143px;
+}
+
 .button-interactive-wide {
   background-color: #F1CDB3;
 }
@@ -612,10 +736,6 @@ ul {
 .pet-card-title {
   position: relative;
   left: 1px;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: 0.06em;
-  color: #545454;
 }
 
 .logo-bright .logo-title {

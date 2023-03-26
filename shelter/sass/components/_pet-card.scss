@@ -32,13 +32,9 @@
 }
 
 .pet-card-title {
-    @extend %title;
+    @extend %third-title;
     position: relative;
     left: 1px;
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: 0.06em;
-    color: $color-dark-l;
 }
 
 .pet-card-learn-more {
