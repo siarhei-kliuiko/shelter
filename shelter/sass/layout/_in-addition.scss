@@ -1,0 +1,45 @@
+.in-addition-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.donation-puppy {
+    margin-top: 11px;
+}
+
+.in-addition-text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 380px;
+    height: 282px;
+}
+
+.in-addition-title {
+    @extend %second-title;
+}
+
+.donation-information {
+    @extend %fourth-title;
+}
+
+.donation-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 13px;
+    border-radius: 9px;
+}
+
+.donation-number {
+    @extend %third-title;
+    margin-left: 15px;
+}
+
+.legal-information {
+    margin: 0;
+    font-family: $font-arial-normal;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-dark-m;
+}

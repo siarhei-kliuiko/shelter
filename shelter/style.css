@@ -63,9 +63,11 @@
   right: 0;
 }
 
-.not-only-title, .pet-card-title, .contribution-title, .help-title, .our-friends-title, .about-title {
+.not-only-title, .donation-information, .pet-card-title, .donation-number, .contribution-title, .in-addition-title, .help-title, .our-friends-title, .about-title {
   margin: 0;
   font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .pet-card-learn-more, .button-interactive-small, .button-interactive-wide-no-background, .button-interactive-wide {
@@ -105,11 +107,9 @@
   height: 52px;
 }
 
-.help-title, .our-friends-title, .about-title {
+.in-addition-title, .help-title, .our-friends-title, .about-title {
   font-size: 35px;
   line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #545454;
 }
 
 .about-text2, .about-text1 {
@@ -117,14 +117,16 @@
   font-family: "Arial", sans-serif;
   font-size: 15px;
   line-height: 160%;
-  color: #4C4C4C;
 }
 
-.pet-card-title, .contribution-title {
+.pet-card-title, .donation-number, .contribution-title {
   font-size: 20px;
   line-height: 115%;
-  letter-spacing: 0.06em;
-  color: #545454;
+}
+
+.donation-information {
+  font-size: 15px;
+  line-height: 110%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -488,6 +490,11 @@ ul {
   background: #FFFFFF;
 }
 
+.in-addition-background-container {
+  height: 462px;
+  background: #F6F6F6;
+}
+
 .header-container {
   padding-top: 30px;
 }
@@ -495,6 +502,11 @@ ul {
 .main-container {
   padding-top: 80px;
   padding-bottom: 100px;
+}
+
+.in-addition-container {
+  padding-left: 183px;
+  padding-right: 182px;
 }
 
 .logo-and-menu {
@@ -700,6 +712,43 @@ ul {
 }
 .sleeping-areas .contribution-title {
   width: 143px;
+}
+
+.in-addition-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.donation-puppy {
+  margin-top: 11px;
+}
+
+.in-addition-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 380px;
+  height: 282px;
+}
+
+.donation-button {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 13px;
+  border-radius: 9px;
+}
+
+.donation-number {
+  margin-left: 15px;
+}
+
+.legal-information {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
 }
 
 .button-interactive-wide {

@@ -73,6 +73,8 @@
 %title {
     margin: 0;
     font-weight: 400;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
 }
 
 %button {
@@ -140,8 +142,6 @@
     @extend %title;
     font-size: 35px;
     line-height: 130%;
-    letter-spacing: 0.06em;
-    color: $color-dark-l;
 }
 
 %about-text {
@@ -149,13 +149,16 @@
     font-family: $font-arial-normal;
     font-size: 15px;
     line-height: 160%;
-    color: $color-dark-xl;
 }
 
 %third-title {
     @extend %title;
     font-size: 20px;
     line-height: 115%;
-    letter-spacing: 0.06em;
-    color: $color-dark-l;
+}
+
+%fourth-title {
+    @extend %title;
+    font-size: 15px;
+    line-height: 110%;
 }
