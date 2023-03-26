@@ -1,0 +1,35 @@
+.our-friends-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-friends-title {
+    @extend %second-title;
+    position: relative;
+    left: 1px;
+    width: 400px;
+    height: 90px;
+    text-align: center;
+}
+
+.our-friends-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0;
+    height: 435px;
+    width: 100%;
+}
+
+.our-friends-cards {
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+}
+
+.our-friends-button {
+    position: relative;
+    left: 1px;
+}

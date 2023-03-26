@@ -1,4 +1,4 @@
-.about-container, .header-container {
+.main-container, .header-container {
   width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
@@ -62,36 +62,49 @@
   right: 0;
 }
 
-.not-only-title, .about-title {
+.pet-card-title, .not-only-title, .our-friends-title, .about-title {
   margin: 0;
   font-weight: 400;
 }
 
-.button-interactive-wide {
+.pet-card-learn-more, .button-interactive-small, .button-interactive-wide-no-background, .button-interactive-wide {
   cursor: pointer;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
-  font-size: 17px;
-  line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
-  fill: #292929;
+  background-color: transparent;
   transition: background-color 0.2s, border-color 0.2s, filter 0.2s;
 }
+.pet-card-learn-more svg, .button-interactive-small svg, .button-interactive-wide-no-background svg, .button-interactive-wide svg {
+  fill: #292929;
+}
 
-.button-interactive-wide:hover {
+.button-interactive-small:active, .button-interactive-wide-no-background:active, .button-interactive-wide:active {
+  filter: brightness(85%);
+}
+
+.pet-card:hover .pet-card-learn-more, .button-interactive-small:hover, .button-interactive-wide-no-background:hover, .button-interactive-wide:hover {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
 }
-.button-interactive-wide:active {
-  filter: brightness(70%);
-}
 
-.button-interactive-wide {
+.pet-card-learn-more, .button-interactive-wide-no-background, .button-interactive-wide {
   padding: 13px 43px;
+  font-size: 17px;
+  line-height: 130%;
 }
 
-.about-title {
+.button-interactive-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 52px;
+  height: 52px;
+}
+
+.our-friends-title, .about-title {
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
@@ -103,6 +116,7 @@
   font-family: "Arial", sans-serif;
   font-size: 15px;
   line-height: 160%;
+  color: #4C4C4C;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -456,11 +470,16 @@ ul {
   background: #FFFFFF;
 }
 
+.our-friends-background-container {
+  height: 877px;
+  background: #F6F6F6;
+}
+
 .header-container {
   padding-top: 30px;
 }
 
-.about-container {
+.main-container {
   padding-top: 80px;
   padding-bottom: 100px;
 }
@@ -524,8 +543,79 @@ ul {
   padding-top: 1px;
 }
 
+.our-friends-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our-friends-title {
+  position: relative;
+  left: 1px;
+  width: 400px;
+  height: 90px;
+  text-align: center;
+}
+
+.our-friends-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+  height: 435px;
+  width: 100%;
+}
+
+.our-friends-cards {
+  display: flex;
+  justify-content: space-between;
+  width: 990px;
+}
+
+.our-friends-button {
+  position: relative;
+  left: 1px;
+}
+
 .button-interactive-wide {
   background-color: #F1CDB3;
+}
+
+.pet-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  height: 435px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #FAFAFA;
+  transition: background-color 0.2s, box-shadow 0.3s, filter 0.1s;
+}
+.pet-card:hover {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.0392156863);
+}
+.pet-card:active {
+  filter: contrast(110%);
+}
+
+.pet-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.pet-card-title {
+  position: relative;
+  left: 1px;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #545454;
 }
 
 .logo-bright .logo-title {

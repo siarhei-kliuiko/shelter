@@ -78,32 +78,41 @@
     cursor: pointer;
     border: 2px solid $color-primary;
     border-radius: 100px;
-    font-size: 17px;
-    line-height: 130%;
     letter-spacing: 0.06em;
     color: $color-dark-3xl;
-    fill: $color-dark-3xl;
+    background-color: transparent;
     transition: background-color .2s, border-color .2s, filter .2s;
+
+    & svg {
+        fill: $color-dark-3xl;
+    }
 }
 
 %button-interactive {
     @extend %button;
 
     &:hover {
-        background-color: $color-primary-light;
-        border-color: $color-primary-light;
+        @extend %button-hover;
     }
 
     &:active {
-        filter: brightness(70%);
+        filter: brightness(85%);
     }
+}
+
+%button-hover {
+    background-color: $color-primary-light;
+    border-color: $color-primary-light;
 }
 
 %button-inactive {
     @extend %button;
     border-color: $color-dark-s;
     color: $color-dark-s;
-    fill: $color-dark-s;
+
+    & svg {
+        fill: $color-dark-s;
+    }
 }
 
 %button-active {
@@ -113,6 +122,17 @@
 
 %button-wide {
     padding: 13px 43px;
+    font-size: 17px;
+    line-height: 130%;
+}
+
+%button-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 52px;
+    height: 52px;
 }
 
 %second-title {
@@ -128,4 +148,5 @@
     font-family: $font-arial-normal;
     font-size: 15px;
     line-height: 160%;
+    color: $color-dark-xl;
 }
