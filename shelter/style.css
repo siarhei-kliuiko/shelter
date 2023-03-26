@@ -52,7 +52,10 @@
   bottom: -7px;
   height: 3px;
   background: #F1CDB3;
-  transition: left 0.5s, right 0.5s;
+  transition: left 0.5s, right 0.5s, filter 0.2s;
+}
+.nav-menu-bright .nav-list .nav-link:active::after {
+  filter: brightness(70%);
 }
 .nav-menu-bright .nav-list > :first-child .nav-link::after, .nav-menu-bright .nav-list .nav-link:hover::after {
   left: 0;
