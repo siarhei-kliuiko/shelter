@@ -62,29 +62,19 @@
                 bottom: -7px;
                 height: 3px;
                 background: $color-primary;
-                transition: left .5s,  right .5s, filter .2s;
-            }
-
-            &:active::after {
-                filter: brightness(70%);
+                transition: left .2s,  right .2s, filter .2s;
             }
         }
-
-        & .nav-link:hover {
-            @extend %nav-link-selected;
-        }
-    }
-}
-
-%nav-link-selected {
-    &::after {
-        left: 0;
-        right: 0;
     }
 }
 
 %active-nav-link {
-    @extend %nav-link-selected;
+    pointer-events: none;
+
+    &::after {
+        left: 0;
+        right: 0;
+    }
 
     &:active::after {
         filter: none;
@@ -129,7 +119,7 @@
 
 %button-inactive {
     @extend %button;
-    cursor: default;
+    pointer-events: none;
     border-color: $color-dark-s;
     color: $color-dark-s;
 

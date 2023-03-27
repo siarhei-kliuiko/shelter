@@ -58,16 +58,16 @@
   bottom: -7px;
   height: 3px;
   background: #F1CDB3;
-  transition: left 0.5s, right 0.5s, filter 0.2s;
+  transition: left 0.2s, right 0.2s, filter 0.2s;
 }
-.nav-menu-dark .nav-list .nav-link:active::after, .nav-menu-bright .nav-list .nav-link:active::after {
-  filter: brightness(70%);
+
+.nav-menu-dark .nav-list > :nth-child(2) .nav-link, .nav-menu-bright .nav-list > :first-child .nav-link {
+  pointer-events: none;
 }
-.nav-menu-dark .nav-list > :nth-child(2) .nav-link::after, .nav-menu-bright .nav-list > :first-child .nav-link::after, .nav-menu-dark .nav-list .nav-link:hover::after, .nav-menu-bright .nav-list .nav-link:hover::after {
+.nav-menu-dark .nav-list > :nth-child(2) .nav-link::after, .nav-menu-bright .nav-list > :first-child .nav-link::after {
   left: 0;
   right: 0;
 }
-
 .nav-menu-dark .nav-list > :nth-child(2) .nav-link:active::after, .nav-menu-bright .nav-list > :first-child .nav-link:active::after {
   filter: none;
 }
@@ -100,7 +100,7 @@
 }
 
 .button-inactive-small-text {
-  cursor: default;
+  pointer-events: none;
   border-color: #CDCDCD;
   color: #CDCDCD;
 }
