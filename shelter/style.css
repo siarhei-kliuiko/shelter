@@ -800,13 +800,21 @@ ul {
   align-items: center;
   color: #F1CDB3;
   text-decoration: none;
+  transition: color 0.3s;
 }
 .contacts-link svg {
   flex: 0 0 auto;
-  fill: #F1CDB3;
+  fill: currentColor;
+  transition: fill 0.3s;
 }
 .contacts-link .contacts-link-text {
   margin-left: 20px;
+}
+.contacts-link:hover {
+  color: #F6F6F6;
+}
+.contacts-link:active {
+  filter: brightness(70%);
 }
 
 .first-address {

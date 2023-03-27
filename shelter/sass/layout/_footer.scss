@@ -36,14 +36,24 @@
     align-items: center;
     color: $color-primary;
     text-decoration: none;
+    transition: color .3s;
 
     & svg {
         flex: 0 0 auto;
-        fill: $color-primary;
+        fill: currentColor;
+        transition: fill .3s;
     }
 
     & .contacts-link-text {
         margin-left: 20px;
+    }
+
+    &:hover {
+        color: $color-light-l;
+    }
+
+    &:active {
+        filter: brightness(70%);
     }
 }
 
