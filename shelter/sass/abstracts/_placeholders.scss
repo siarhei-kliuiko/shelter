@@ -63,10 +63,24 @@
             }
         }
 
-        & > :first-child .nav-link::after, & .nav-link:hover::after {
-            left: 0;
-            right: 0;
+        & .nav-link:hover {
+            @extend %nav-link-selected;
         }
+    }
+}
+
+%nav-link-selected {
+    &::after {
+        left: 0;
+        right: 0;
+    }
+}
+
+%active-nav-link {
+    @extend %nav-link-selected;
+
+    &:active::after {
+        filter: none;
     }
 }
 
@@ -128,12 +142,25 @@
 }
 
 %button-small {
+    width: 52px;
+    height: 52px;
+
+}
+
+%button-small-text {
+    @extend %button-small;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    font-size: 20px;
+    line-height: 115%;
+    text-align: center;
+}
+
+%button-small-svg {
+    @extend %button-small;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
-    width: 52px;
-    height: 52px;
 }
 
 %second-title {

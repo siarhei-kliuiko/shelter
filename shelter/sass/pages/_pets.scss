@@ -1,0 +1,27 @@
+.logo-dark {
+    @extend %logo;
+
+    & .logo-title {
+        color: $color-dark-l;
+    }
+
+    & .logo-subtitle {
+        color: $color-dark-3xl;
+    }
+}
+
+.nav-menu-dark {
+    @extend %nav-menu;
+
+    & .nav-link {
+        color: $color-dark-l;
+    }
+
+    & .nav-link:hover {
+        color: $color-dark-3xl;
+    }
+
+    & .nav-list> :nth-child(2) .nav-link {
+        @extend %active-nav-link;
+    }
+}

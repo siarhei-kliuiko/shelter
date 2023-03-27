@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 }
 
 .our-friends-title {
@@ -18,9 +19,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 60px 0;
     height: 435px;
     width: 100%;
+}
+
+.our-friends-slider-button {
+    position: relative;
+    top: 1px;
 }
 
 .our-friends-cards {
@@ -32,4 +37,15 @@
 .our-friends-button {
     position: relative;
     left: 1px;
+}
+
+.pets-our-friends-slider {
+    height: 930px;
+    flex-wrap: wrap;
+}
+
+.pets-slider-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
 }

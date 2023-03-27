@@ -9,7 +9,22 @@
     @extend %button-wide;
 }
 
-.button-interactive-small {
+.button-interactive-small-svg {
     @extend %button-interactive;
-    @extend %button-small;
+    @extend %button-small-svg;
+}
+
+.button-interactive-small-text {
+    @extend %button-interactive;
+    @extend %button-small-text;
+}
+
+.button-inactive-small-text {
+    @extend %button-inactive;
+    @extend %button-small-text;
+}
+
+.button-active-small-text {
+    @extend %button-active;
+    @extend %button-small-text;
 }

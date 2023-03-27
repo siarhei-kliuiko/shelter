@@ -17,7 +17,12 @@
         color: $color-dark-s;
     }
 
-    & .nav-list > :first-child .nav-link, & .nav-link:hover {
+    & .nav-list> :first-child .nav-link,
+    & .nav-link:hover {
         color: $color-light-s;
+    }
+
+    & .nav-list > :first-child .nav-link {
+        @extend %active-nav-link;
     }
 }
