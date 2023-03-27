@@ -8,6 +8,11 @@
     & .logo-subtitle {
         color: $color-light-xl;
     }
+
+    &:hover .logo-title {
+        color: $color-primary-light;
+    }
+
 }
 
 .nav-menu-bright {

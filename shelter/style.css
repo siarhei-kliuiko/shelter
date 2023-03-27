@@ -18,6 +18,7 @@
   line-height: 115%;
   letter-spacing: 0.06em;
   text-transform: capitalize;
+  transition: color 0.2s, filter 0.1s;
 }
 .logo-dark .logo-subtitle, .logo-bright .logo-subtitle {
   margin-left: 4px;
@@ -25,6 +26,10 @@
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
+  transition: color 0.2s, filter 0.1s;
+}
+.logo-dark:active .logo-title, .logo-bright:active .logo-title, .logo-dark:active .logo-subtitle, .logo-bright:active .logo-subtitle {
+  filter: blur(0.5px);
 }
 
 .nav-menu-dark, .nav-menu-bright {
@@ -916,6 +921,9 @@ ul {
 .logo-bright .logo-subtitle {
   color: #FFFFFF;
 }
+.logo-bright:hover .logo-title {
+  color: #FDDCC4;
+}
 
 .nav-menu-bright .nav-link {
   color: #CDCDCD;
@@ -926,7 +934,7 @@ ul {
 .logo-dark .logo-title {
   color: #545454;
 }
-.logo-dark .logo-subtitle {
+.logo-dark .logo-subtitle, .logo-dark:hover .logo-title {
   color: #292929;
 }
 
