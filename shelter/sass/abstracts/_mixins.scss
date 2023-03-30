@@ -1,4 +1,4 @@
-@mixin media-desktop-to-tablet {
+@mixin media-smaller-than-desktop {
     @media screen and (max-width: ($desktop-content-width - 1px)) {
         @content;
     }
@@ -8,4 +8,8 @@
     @media screen and (max-width: $tablet-content-width) {
         @content;
     }
+}
+
+@mixin set-element-animation($property) {
+    transition: $property .6s;
 }

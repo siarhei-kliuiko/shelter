@@ -7,13 +7,7 @@
 @media screen and (max-width: 1279px) {
   .footer-container, .main-container, .header-container {
     width: 100vw;
-    padding: max(30px, 3.125%);
-  }
-}
-@media screen and (max-width: 768px) {
-  .footer-container, .main-container, .header-container {
-    width: 100vw;
-    padding: 0 30px;
+    padding: 0 max(30px, 3.125%);
   }
 }
 
@@ -84,7 +78,7 @@
   filter: none;
 }
 
-.not-only-title, .donation-information, .pet-card-title, .contacts-link, .donation-number, .contribution-title, .contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-title {
+.not-only__title, .donation-information, .pet-card-title, .contacts-link, .donation-number, .contribution-title, .contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-title {
   margin: 0;
   font-weight: 400;
 }
@@ -519,7 +513,7 @@ ul {
 }
 
 .start-screen-gradient-background-container {
-  height: 908px;
+  height: fit-content;
   background: url("assets/images/noise_transparent@2x.png"), radial-gradient(120% 220% at 0% 0%, #5B483A 0%, #262425 70%), #211F20;
 }
 
@@ -585,17 +579,36 @@ ul {
 
 .not-only {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 90px;
+  row-gap: 100px;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 1279px) {
+  .not-only {
+    margin-top: max(60px, 7vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .not-only {
+    justify-content: center;
+  }
 }
 
-.not-only-content {
+.not-only__content {
   margin-top: 163px;
-  width: 460px;
+  max-width: 460px;
   height: 322px;
+  flex: 1 1 310px;
+  transition: margin-top 0.6s;
+}
+@media screen and (max-width: 768px) {
+  .not-only__content {
+    margin-top: 0;
+  }
 }
 
-.not-only-title {
+.not-only__title {
   margin-top: 1px;
   width: 310px;
   font-size: 44px;
@@ -603,12 +616,35 @@ ul {
   color: #FFFFFF;
 }
 
-.not-only-text {
+.not-only__text {
   margin: 41px 0 42px 0;
   font-family: "Arial", sans-serif;
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
+}
+
+.not-only__image {
+  margin-left: auto;
+}
+@media screen and (max-width: 1279px) {
+  .not-only__image {
+    width: max(569px, 58%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .not-only__image {
+    max-height: 593px;
+  }
+}
+
+.not-only__button {
+  transition: margin-left 0.6s;
+}
+@media screen and (max-width: 768px) {
+  .not-only__button {
+    margin-left: 126px;
+  }
 }
 
 .about-content {

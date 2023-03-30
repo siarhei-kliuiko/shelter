@@ -4,14 +4,9 @@
     margin: 0 auto;
     padding: 0 40px;
 
-    @include media-desktop-to-tablet {
+    @include media-smaller-than-desktop {
         width: 100vw;
-        padding: max(30px, 3.125%);
-    }
-
-    @include media-tablet {
-        width: 100vw;
-        padding: 0 30px;
+        padding: 0 max(30px, 3.125%);
     }
 }
 
