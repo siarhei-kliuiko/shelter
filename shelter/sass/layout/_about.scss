@@ -2,25 +2,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap-reverse;
     padding: 0 175px;
+    row-gap: 80px;
+
+    @include media-smaller-than-desktop {
+        padding: 0 max(136px, 13vw) 0 max(135px, 13vw);
+    }
+
+    @include media-tablet {
+        flex-direction: column-reverse;
+    }
 }
 
-.about-text-content {
+.about-content__text-content {
     width: 430px;
     height: 380px;
 }
 
-.about-title {
+.about-content__title {
     @extend %second-title;
     width: 370px;
 }
 
-.about-text1 {
+.about-content__text1 {
     @extend %about-text;
     padding: 24px 0;
 }
 
-.about-text2 {
+.about-content__text2 {
     @extend %about-text;
     padding-top: 1px;
+}
+
+.about-content__image {
+    @include set-element-animation(margin-left);
+    @include media-tablet {
+       align-self: flex-end;
+       margin-left: 69px;
+    }
 }

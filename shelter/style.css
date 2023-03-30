@@ -78,7 +78,7 @@
   filter: none;
 }
 
-.not-only__title, .donation-information, .pet-card-title, .contacts-link, .donation-number, .contribution-title, .contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-title {
+.not-only__title, .donation-information, .pet-card-title, .contacts-link, .donation-number, .contribution-title, .contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-content__title {
   margin: 0;
   font-weight: 400;
 }
@@ -143,14 +143,14 @@
   align-items: center;
 }
 
-.contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-title {
+.contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-content__title {
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #545454;
 }
 
-.about-text2, .about-text1 {
+.about-content__text2, .about-content__text1 {
   margin: 0;
   font-family: "Arial", sans-serif;
   font-size: 15px;
@@ -518,7 +518,7 @@ ul {
 }
 
 .about-background-container {
-  height: 588px;
+  height: fit-content;
   background: #FFFFFF;
 }
 
@@ -582,7 +582,6 @@ ul {
   flex-wrap: wrap;
   margin-top: 90px;
   row-gap: 100px;
-  transition: all 0.5s;
 }
 @media screen and (max-width: 1279px) {
   .not-only {
@@ -651,24 +650,46 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap-reverse;
   padding: 0 175px;
+  row-gap: 80px;
+}
+@media screen and (max-width: 1279px) {
+  .about-content {
+    padding: 0 max(136px, 13vw) 0 max(135px, 13vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column-reverse;
+  }
 }
 
-.about-text-content {
+.about-content__text-content {
   width: 430px;
   height: 380px;
 }
 
-.about-title {
+.about-content__title {
   width: 370px;
 }
 
-.about-text1 {
+.about-content__text1 {
   padding: 24px 0;
 }
 
-.about-text2 {
+.about-content__text2 {
   padding-top: 1px;
+}
+
+.about-content__image {
+  transition: margin-left 0.6s;
+}
+@media screen and (max-width: 768px) {
+  .about-content__image {
+    align-self: flex-end;
+    margin-left: 69px;
+  }
 }
 
 .our-friends-content {

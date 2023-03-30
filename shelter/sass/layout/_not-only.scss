@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     margin-top: 90px;
     row-gap: 100px;
-    transition: all .5s;
 
     @include media-smaller-than-desktop {
         margin-top: max(60px, 7vw);
