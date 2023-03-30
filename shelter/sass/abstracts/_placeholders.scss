@@ -1,8 +1,18 @@
 %container {
-    width: 1280px;
+    max-width: 1280px;
     height: 100%;
     margin: 0 auto;
     padding: 0 40px;
+
+    @include media-desktop-to-tablet {
+        width: 100vw;
+        padding: max(30px, 3.125%);
+    }
+
+    @include media-tablet {
+        width: 100vw;
+        padding: 0 30px;
+    }
 }
 
 %logo {

@@ -1,0 +1,11 @@
+@mixin media-desktop-to-tablet {
+    @media screen and (max-width: ($desktop-content-width - 1px)) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+    @media screen and (max-width: $tablet-content-width) {
+        @content;
+    }
+}
