@@ -538,7 +538,7 @@ ul {
 }
 
 .footer-gradient-background-container {
-  height: 350px;
+  height: fit-content;
   background: url(assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
@@ -563,6 +563,12 @@ ul {
 
 .footer-container {
   padding-top: 40px;
+  transition: padding-top 0.6s;
+}
+@media screen and (max-width: 1279px) {
+  .footer-container {
+    padding-top: 30px;
+  }
 }
 
 .logo-and-menu {
@@ -919,7 +925,16 @@ ul {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 65px;
+  column-gap: 160px;
+  transition: column-gap 0.6s;
+}
+@media screen and (max-width: 1279px) {
+  .footer-content {
+    column-gap: 60px;
+  }
 }
 
 .contacts-info {
@@ -928,10 +943,17 @@ ul {
   justify-content: space-between;
   height: 234px;
   margin-top: 16px;
+  transition: margin-top 0.6s;
+}
+@media screen and (max-width: 1279px) {
+  .contacts-info {
+    margin-top: 0;
+  }
 }
 
 .contacts {
-  width: fit-content;
+  width: 278px;
+  white-space: nowrap;
 }
 
 .locations {

@@ -1,6 +1,14 @@
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 65px;
+    column-gap: 160px;
+    @include set-element-animation(column-gap);
+
+    @include media-smaller-than-desktop {
+        column-gap: 60px;
+    }
 }
 
 .contacts-info {
@@ -9,10 +17,16 @@
     justify-content: space-between;
     height: 234px;
     margin-top: 16px;
+    @include set-element-animation(margin-top);
+
+    @include media-smaller-than-desktop {
+        margin-top: 0;
+    }
 }
 
 .contacts {
-    width: fit-content;
+    width: 278px;
+    white-space: nowrap;
 }
 
 .locations {
