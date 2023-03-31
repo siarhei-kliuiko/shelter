@@ -13,3 +13,11 @@ $color-dark-m: #B2B2B2;
 $desktop-content-width: 1280px;
 $tablet-content-width: 768px;
 $mobile-content-width: 320px;
+
+$pet-card-width: 270px;
+$pet-card-height: 435px;
+
+$our-friends-cards-desktop-width: $pet-card-width * 3 + 90px * 2;
+$our-friends-slider-tablet-width: 708px;
+$our-friends-cards-tablet-column-gap: 40px;
+$our-friends-cards-tablet-width: $pet-card-width * 2 + $our-friends-cards-tablet-column-gap;

@@ -712,7 +712,6 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 435px;
   width: 100%;
 }
 
@@ -725,6 +724,13 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 990px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1279px) {
+  .our-friends-cards {
+    width: max(580px, 81.9209039548%);
+    column-gap: max(40px, 6.8965517241%);
+  }
 }
 
 .our-friends-button {
@@ -957,10 +963,10 @@ ul {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  width: 270px;
   height: 435px;
   border-radius: 9px;
   overflow: hidden;
+  flex: 0 0 270px;
   background: #FAFAFA;
   transition: background-color 0.2s, box-shadow 0.3s, filter 0.1s;
 }

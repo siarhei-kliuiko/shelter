@@ -19,7 +19,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 435px;
     width: 100%;
 }
 
@@ -31,7 +30,13 @@
 .our-friends-cards {
     display: flex;
     justify-content: space-between;
-    width: 990px;
+    width: $our-friends-cards-desktop-width;
+    overflow: hidden;
+
+    @include media-smaller-than-desktop {
+        width: max($our-friends-cards-tablet-width, $our-friends-cards-tablet-width / $our-friends-slider-tablet-width * 100%);
+        column-gap: max($our-friends-cards-tablet-column-gap, $our-friends-cards-tablet-column-gap / $our-friends-cards-tablet-width * 100%);
+    }
 }
 
 .our-friends-button {
