@@ -14,13 +14,17 @@
 }
 
 .not-only__content {
-    margin-top: 163px;
+    margin-top: $not-only__content-margin-top-desktop;
     max-width: 460px;
     height: 322px;
     flex: 1 1 310px;
-    @include set-element-animation(margin-top);
+
+    @include media-smaller-than-desktop {
+        margin-top: calc($not-only__content-margin-top-desktop / $desktop-content-width) * 100vw;
+    }
 
     @include media-tablet {
+        @include set-element-animation(margin-top);
         margin-top: 0;
     }
 }
