@@ -528,7 +528,7 @@ ul {
 }
 
 .help-background-container {
-  height: 611px;
+  height: fit-content;
   background: #FFFFFF;
 }
 
@@ -752,9 +752,14 @@ ul {
 .help-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1279px) {
+  .help-content {
+    width: max(630px, 82.03125vw);
+  }
 }
 
 .help-title {
@@ -768,12 +773,16 @@ ul {
 .contributions-list {
   display: flex;
   justify-content: center;
-  align-content: space-between;
   flex-wrap: wrap;
-  height: 281px;
-  width: 1026px;
+  margin-top: 60px;
   column-gap: 120px;
+  row-gap: 55px;
   list-style: none;
+}
+@media screen and (max-width: 1279px) {
+  .contributions-list {
+    column-gap: max(60px, 7.8125vw);
+  }
 }
 
 .contribution-info {
@@ -782,6 +791,11 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 113px;
+}
+@media screen and (max-width: 1279px) {
+  .contribution-info {
+    width: 170px;
+  }
 }
 
 .contribution-image {
@@ -792,15 +806,6 @@ ul {
   white-space: nowrap;
 }
 
-.pet-food {
-  /*position: relative;
-   left: 2px;
-
-  & .contribution-image {
-       position: relative;
-       left: -1px;
-   }*/
-}
 .pet-food .contribution-title {
   width: 82px;
 }
