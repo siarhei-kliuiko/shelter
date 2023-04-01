@@ -72,6 +72,9 @@
 }
 
 .first-address {
-    position: relative;
-    top: 1px;
+    margin-top: 1px;
+
+    @include media-tablet {
+        margin-top: 0;
+    }
 }

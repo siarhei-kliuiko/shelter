@@ -1,6 +1,7 @@
 .our-friends-content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
 }
@@ -40,8 +41,11 @@
 }
 
 .our-friends-button {
-    position: relative;
-    left: 1px;
+    margin-left: 1px;
+
+    @include media-tablet {
+        margin-left: 0;
+    }
 }
 
 .our-friends__cards-container_big {

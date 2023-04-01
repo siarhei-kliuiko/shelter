@@ -710,6 +710,7 @@ ul {
 .our-friends-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
@@ -749,8 +750,12 @@ ul {
 }
 
 .our-friends-button {
-  position: relative;
-  left: 1px;
+  margin-left: 1px;
+}
+@media screen and (max-width: 768px) {
+  .our-friends-button {
+    margin-left: 0;
+  }
 }
 
 .our-friends__cards-container_big {
@@ -868,9 +873,13 @@ ul {
 }
 
 .vitamins .contribution-image {
-  position: relative;
   margin-top: 3px;
-  left: -1px;
+  margin-left: -1px;
+}
+@media screen and (max-width: 768px) {
+  .vitamins .contribution-image {
+    margin-left: 0;
+  }
 }
 .vitamins .contribution-title {
   width: 89px;
@@ -888,8 +897,12 @@ ul {
 }
 
 .sleeping-areas .contribution-image {
-  position: relative;
-  left: 1px;
+  margin-left: 1px;
+}
+@media screen and (max-width: 768px) {
+  .sleeping-areas .contribution-image {
+    margin-left: 0;
+  }
 }
 .sleeping-areas .contribution-title {
   width: 143px;
@@ -1022,8 +1035,12 @@ ul {
 }
 
 .first-address {
-  position: relative;
-  top: 1px;
+  margin-top: 1px;
+}
+@media screen and (max-width: 768px) {
+  .first-address {
+    margin-top: 0;
+  }
 }
 
 .button-interactive-wide {
