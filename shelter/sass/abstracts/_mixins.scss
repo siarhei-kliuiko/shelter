@@ -10,6 +10,12 @@
     }
 }
 
+@mixin media-smaller-than-tablet {
+    @media screen and (max-width: ($tablet-content-width - 1px)) {
+        @content;
+    }
+}
+
 @mixin set-element-animation($properties...) {
     $result: ();
     @each $property in $properties {
@@ -17,4 +23,14 @@
     }
 
     transition: $result;
+}
+
+@mixin create-styled-burger($color) {
+    @extend %burger;
+
+    & .burger__line,
+    &::before,
+    &::after {
+        background-color: $color;
+    }
 }

@@ -31,3 +31,8 @@
         @extend %active-nav-link;
     }
 }
+
+.burger_bright {
+    @include create-styled-burger($color-primary);
+    align-self: center;
+}

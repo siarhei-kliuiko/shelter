@@ -1,6 +1,9 @@
 .logo-and-menu {
     display: flex;
-    justify-content: space-between;
     align-items: start;
-    width: 100%;
+    @include set-element-animation(margin);
+
+    @include media-smaller-than-tablet {
+        margin: 0 10px;
+    }
 }
