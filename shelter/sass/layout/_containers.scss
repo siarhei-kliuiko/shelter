@@ -18,3 +18,11 @@
         padding-top: 30px;
     }
 }
+
+.pets-our-friends-container {
+    @include set-element-animation(padding-bottom);
+
+    @include media-smaller-than-desktop {
+        padding-bottom: 76px;
+    }
+}

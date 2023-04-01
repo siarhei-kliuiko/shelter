@@ -10,6 +10,11 @@
     }
 }
 
-@mixin set-element-animation($property) {
-    transition: $property .6s;
+@mixin set-element-animation($properties...) {
+    $result: ();
+    @each $property in $properties {
+        $result: append($result, $property + " .6s", comma);
+    }
+
+    transition: $result;
 }
