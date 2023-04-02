@@ -10,8 +10,6 @@
     @extend %second-title;
     position: relative;
     left: 1px;
-    width: 400px;
-    height: 90px;
     text-align: center;
 }
 
@@ -20,11 +18,21 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    @include media-smaller-than-tablet {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        padding: 0 15px;
+        column-gap: 80px;
+    }
 }
 
 .our-friends-slider-button {
-    position: relative;
-    top: 1px;
+    @include media-smaller-than-tablet {
+        flex-wrap: wrap;
+        order: 1;
+    }
 }
 
 .our-friends__cards-container {
@@ -37,6 +45,10 @@
     @include media-smaller-than-desktop {
         width: max($our-friends-cards-tablet-width, $our-friends-cards-tablet-width / $our-friends-slider-tablet-width * 100%);
         column-gap: max($our-friends-cards-tablet-column-gap, $our-friends-cards-tablet-column-gap / $our-friends-cards-tablet-width * 100%);
+    }
+
+    @include media-smaller-than-tablet {
+        width: max($pet-card-width, $our-friends-cards-tablet-width / $tablet-content-width * 100vw);
     }
 }
 

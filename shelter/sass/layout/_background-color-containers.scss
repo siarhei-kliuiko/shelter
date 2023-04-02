@@ -9,8 +9,12 @@
 }
 
 .our-friends-background-container {
-    height: 877px;
+    height: $our-friends-background-container-height-tablet;
     background: $color-light-l;
+
+    @include media-smaller-than-tablet {
+        height: max(791px, $our-friends-background-container-height-tablet / $tablet-content-width * 100vw);
+    }
 }
 
 .help-background-container {
