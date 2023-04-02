@@ -558,6 +558,11 @@ ul {
   height: fit-content;
   background: url("assets/images/noise_transparent@2x.png"), radial-gradient(120% 220% at 0% 0%, #5B483A 0%, #262425 70%), #211F20;
 }
+@media screen and (max-width: 320px) {
+  .start-screen-gradient-background-container {
+    height: 823px;
+  }
+}
 
 .about-background-container {
   height: fit-content;
@@ -638,6 +643,7 @@ ul {
   flex-wrap: wrap;
   margin-top: 90px;
   row-gap: 100px;
+  transition: row-gap .6s;
 }
 @media screen and (max-width: 1279px) {
   .not-only {
@@ -647,6 +653,11 @@ ul {
 @media screen and (max-width: 768px) {
   .not-only {
     justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .not-only {
+    row-gap: 105px;
   }
 }
 
@@ -667,13 +678,30 @@ ul {
     margin-top: 0;
   }
 }
+@media screen and (max-width: 320px) {
+  .not-only__content {
+    height: 296px;
+  }
+}
 
 .not-only__title {
   margin-top: 1px;
-  width: 310px;
   font-size: 44px;
   line-height: 130%;
   color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .not-only__title {
+    font-size: max(25px, 5.7291666667vw);
+    letter-spacing: 0.06em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .not-only__title {
+    text-align: center;
+    margin-left: 1px;
+    margin-top: 0;
+  }
 }
 
 .not-only__text {
@@ -682,6 +710,11 @@ ul {
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
+}
+@media screen and (max-width: 320px) {
+  .not-only__text {
+    text-align: center;
+  }
 }
 
 .not-only__image {
@@ -694,16 +727,37 @@ ul {
 }
 @media screen and (max-width: 768px) {
   .not-only__image {
-    max-height: 593px;
+    height: 593px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .not-only__image {
+    height: unset;
+    width: max(260px, 74.0885416667vw);
+  }
+}
+@media screen and (max-width: 320px) {
+  .not-only__image {
+    height: 271.77px;
   }
 }
 
 .not-only__button {
-  transition: margin-left .6s;
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .not-only__button {
     margin-left: 126px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .not-only__button {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .not-only__button {
+    margin-left: 46px;
   }
 }
 

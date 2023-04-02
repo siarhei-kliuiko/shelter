@@ -16,6 +16,12 @@
     }
 }
 
+@mixin media-mobile {
+    @media screen and (max-width: $mobile-content-width) {
+        @content;
+    }
+}
+
 @mixin set-element-animation($properties...) {
     $result: ();
     @each $property in $properties {
