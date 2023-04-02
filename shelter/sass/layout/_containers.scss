@@ -7,6 +7,12 @@
     @extend %container;
     padding-top: 80px;
     padding-bottom: 100px;
+    @include set-element-animation(padding-top, padding-bottom);
+
+    @include media-smaller-than-tablet {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
 }
 
 .footer-container {

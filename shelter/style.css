@@ -201,12 +201,28 @@
   letter-spacing: 0.06em;
   color: #545454;
 }
+@media screen and (max-width: 767px) {
+  .contacts-title, .in-addition-title, .help-title, .our-friends-title, .about-content__title {
+    font-size: max(25px, 4.5572916667vw);
+  }
+}
 
 .about-content__text2, .about-content__text1 {
   margin: 0;
   font-family: "Arial", sans-serif;
   font-size: 15px;
   line-height: 160%;
+}
+@media screen and (max-width: 767px) {
+  .about-content__text2, .about-content__text1 {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .about-content__text2, .about-content__text1 {
+    text-align: justify;
+  }
 }
 
 .pet-card-title, .contacts-link, .donation-number, .contribution-title {
@@ -611,6 +627,13 @@ ul {
 .main-container {
   padding-top: 80px;
   padding-bottom: 100px;
+  transition: padding-top .6s, padding-bottom .6s;
+}
+@media screen and (max-width: 767px) {
+  .main-container {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
 }
 
 .footer-container {
@@ -783,20 +806,53 @@ ul {
 @media screen and (max-width: 768px) {
   .about-content {
     flex-direction: column-reverse;
+    width: 437px;
+    padding: 0;
+    margin: 0 136px 0 135px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-content {
+    width: max(300px, 56.9010416667vw);
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .about-content {
+    row-gap: 41.02px;
   }
 }
 
 .about-content__text-content {
   width: 430px;
-  height: 380px;
+}
+@media screen and (max-width: 767px) {
+  .about-content__text-content {
+    width: unset;
+  }
 }
 
-.about-content__title {
-  width: 370px;
+@media screen and (max-width: 767px) {
+  .about-content__title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .about-content__title {
+    margin-left: 1px;
+    height: 64px;
+  }
 }
 
 .about-content__text1 {
-  padding: 24px 0;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 320px) {
+  .about-content__text1 {
+    margin-top: 25px;
+    margin-bottom: 21px;
+  }
 }
 
 .about-content__text2 {
@@ -810,6 +866,18 @@ ul {
   .about-content__image {
     align-self: flex-end;
     margin-left: 69px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-content__image {
+    margin: 0 auto;
+    width: max(260px, 39.0625vw);
+  }
+}
+@media screen and (max-width: 320px) {
+  .about-content__image {
+    margin-bottom: 0.4px;
+    height: 353.6px;
   }
 }
 
