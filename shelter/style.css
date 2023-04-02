@@ -558,11 +558,6 @@ ul {
   height: fit-content;
   background: url("assets/images/noise_transparent@2x.png"), radial-gradient(120% 220% at 0% 0%, #5B483A 0%, #262425 70%), #211F20;
 }
-@media screen and (max-width: 320px) {
-  .start-screen-gradient-background-container {
-    height: 823px;
-  }
-}
 
 .about-background-container {
   height: fit-content;
@@ -738,6 +733,7 @@ ul {
 }
 @media screen and (max-width: 320px) {
   .not-only__image {
+    margin-top: 0.24px;
     height: 271.77px;
   }
 }
