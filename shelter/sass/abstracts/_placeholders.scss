@@ -83,6 +83,10 @@
     @include media-smaller-than-tablet {
         width: 0;
     }
+
+    @include media-mobile {
+        display: none;
+    }
 }
 
 %burger {
@@ -112,6 +116,10 @@
 
     @include media-smaller-than-tablet {
         width: 30px;
+    }
+
+    @include media-mobile {
+        margin-left: auto;
     }
 }
 

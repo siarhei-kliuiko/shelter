@@ -80,6 +80,11 @@
     width: 0;
   }
 }
+@media screen and (max-width: 320px) {
+  .nav-menu-dark, .nav-menu-bright {
+    display: none;
+  }
+}
 
 .burger_bright {
   position: relative;
@@ -100,6 +105,11 @@
 @media screen and (max-width: 767px) {
   .burger_bright {
     width: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .burger_bright {
+    margin-left: auto;
   }
 }
 
