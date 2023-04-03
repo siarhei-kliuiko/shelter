@@ -1210,16 +1210,32 @@ ul {
   flex-wrap: wrap-reverse;
   row-gap: 60px;
   column-gap: 30px;
+  transition: row-gap .6s;
 }
 @media screen and (max-width: 768px) {
   .in-addition-content {
     position: unset;
   }
 }
+@media screen and (max-width: 767px) {
+  .in-addition-content {
+    row-gap: 42.02px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .in-addition-content__donation-puppy {
     margin-left: -1px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .in-addition-content__donation-puppy {
+    width: max(260px, 65.7552083333vw);
+  }
+}
+@media screen and (max-width: 320px) {
+  .in-addition-content__donation-puppy {
+    height: 135.2px;
   }
 }
 
@@ -1230,10 +1246,43 @@ ul {
   width: 380px;
   height: 282px;
 }
+@media screen and (max-width: 767px) {
+  .in-addition-text-content {
+    min-width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .in-addition-text-content {
+    align-items: center;
+    height: 281px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .in-addition-title {
+    margin-left: 1px;
+    text-align: center;
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .donation-information {
+    letter-spacing: unset;
+  }
+}
+@media screen and (max-width: 320px) {
+  .donation-information {
+    margin-left: -1px;
+    text-align: center;
+    line-height: 160%;
+  }
+}
 
 .donation-button {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 8px 13px;
   border-radius: 9px;
 }
@@ -1242,9 +1291,19 @@ ul {
     padding-right: 12px;
   }
 }
+@media screen and (max-width: 320px) {
+  .donation-button {
+    margin-left: -1px;
+  }
+}
 
 .donation-number {
   margin-left: 15px;
+}
+@media screen and (max-width: 767px) {
+  .donation-number {
+    font-size: max(15px, 2.6041666667vw);
+  }
 }
 
 .legal-information {
@@ -1254,6 +1313,13 @@ ul {
   font-size: 12px;
   line-height: 18px;
   color: #B2B2B2;
+  transition: margin .6s;
+}
+@media screen and (max-width: 320px) {
+  .legal-information {
+    margin: 0 10px;
+    text-align: justify;
+  }
 }
 
 .footer-content {

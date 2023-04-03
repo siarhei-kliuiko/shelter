@@ -9,15 +9,28 @@
     flex-wrap: wrap-reverse;
     row-gap: 60px;
     column-gap: 30px;
+    @include set-element-animation(row-gap);
 
     @include media-tablet {
         position: unset;
+    }
+
+    @include media-smaller-than-tablet {
+        row-gap: 42.02px;
     }
 }
 
 .in-addition-content__donation-puppy {
     @include media-tablet {
         margin-left: -1px;
+    }
+
+    @include media-smaller-than-tablet {
+        width: max(260px, calc($in-addition-content__donation-puppy-width / $tablet-content-width * 100vw));
+    }
+
+    @include media-mobile {
+        height: 135.2px;
     }
 }
 
@@ -27,30 +40,64 @@
     justify-content: space-between;
     width: 380px;
     height: 282px;
+
+    @include media-smaller-than-tablet {
+        min-width: 300px;
+    }
+
+    @include media-mobile {
+        align-items: center;
+        height: 281px;
+    }
 }
 
 .in-addition-title {
     @extend %second-title;
+
+    @include media-mobile {
+        margin-left: 1px;
+        text-align: center;
+        height: 64px;
+    }
 }
 
 .donation-information {
     @extend %fourth-title;
+
+    @include media-smaller-than-tablet {
+        letter-spacing: unset;
+    }
+
+    @include media-mobile {
+        margin-left: -1px;
+        text-align: center;
+        line-height: 160%;
+    }
 }
 
 .donation-button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 8px 13px;
     border-radius: 9px;
 
     @include media-tablet {
         padding-right: 12px;
     }
+
+    @include media-mobile {
+        margin-left: -1px;
+    }
 }
 
 .donation-number {
     @extend %third-title;
     margin-left: 15px;
+
+    @include media-smaller-than-tablet {
+        font-size: max(15px, calc($third-title-font-size / $tablet-content-width * 100vw));
+    }
 }
 
 .legal-information {
@@ -60,4 +107,10 @@
     font-size: 12px;
     line-height: 18px;
     color: $color-dark-m;
+    @include set-element-animation(margin);
+
+    @include media-mobile {
+        margin: 0 10px;
+        text-align: justify;
+    }
 }
