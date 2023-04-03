@@ -4,10 +4,14 @@
     flex-wrap: wrap;
     row-gap: 65px;
     column-gap: 160px;
-    @include set-element-animation(column-gap);
+    @include set-element-animation(column-gap, row-gap);
 
     @include media-smaller-than-desktop {
         column-gap: 60px;
+    }
+
+    @include media-smaller-than-tablet {
+        row-gap: 40px;
     }
 }
 
@@ -25,23 +29,47 @@
 }
 
 .contacts {
-    width: 278px;
-    white-space: nowrap;
+    width: 278.3px;
+    margin-left: -0.3px;
+
+    @include media-mobile {
+        align-items: center;
+        height: 208px;
+    }
 }
 
 .locations {
     width: 302px;
+
+    @include media-mobile {
+        height: 222px;
+    }
 }
 
 .contacts-title {
     @extend %second-title;
     height: 90px;
     color: $color-light-xl;
+
+    @include media-smaller-than-tablet {
+        height: unset;
+    }
+
+    @include media-mobile {
+        text-align: center;
+        height: 64px;
+    }
 }
 
 .locations-title {
     position: relative;
     left: 1px;
+    width: 270px;
+
+    @include media-mobile {
+        position: unset;
+        align-self: center;
+    }
 }
 
 .contacts-link {
@@ -75,6 +103,22 @@
     margin-top: 1px;
 
     @include media-tablet {
-        margin-top: 0;
+        margin-top: unset;
+    }
+}
+
+.second-address {
+    @include media-mobile {
+        margin-top: -1px;
+    }
+}
+
+.footer-content__image {
+    @include media-smaller-than-tablet {
+        width: max(260px, calc($footer-content__image-width / $tablet-content-width * 100vw));
+    }
+
+    @include media-mobile {
+        height: 269px;
     }
 }
