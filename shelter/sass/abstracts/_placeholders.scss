@@ -1,8 +1,18 @@
 %container {
-    width: 1280px;
+    max-width: 1280px;
     height: 100%;
     margin: 0 auto;
     padding: 0 40px;
+
+    @include media-smaller-than-desktop {
+        width: 100vw;
+        padding: 0 max(30px, 3.125%);
+    }
+
+    @include media-smaller-than-tablet {
+        min-width: $mobile-content-width;
+        padding: 0 max(10px, $container-mobile-left-right-padding / $mobile-content-width * 100%);
+    }
 }
 
 %logo {
@@ -40,6 +50,9 @@
     width: 443px;
     height: 27px;
     margin-top: 16px;
+    margin-left: auto;
+    overflow: hidden;
+    @include set-element-animation (width);
 
     & .nav-list {
         display: flex;
@@ -66,6 +79,54 @@
             }
         }
     }
+
+    @include media-smaller-than-tablet {
+        width: 0;
+    }
+
+    @include media-mobile {
+        display: none;
+    }
+}
+
+%burger {
+    position: relative;
+    width: 0;
+    height: 22px;
+    @include set-element-animation(width);
+
+    & .burger__line {
+        @extend %burger-line;
+
+        top: calc(50% - $burger-line-height / 2);
+    }
+
+    &::before {
+        @extend %burger-line;
+
+        content: "";
+    }
+
+    &::after {
+        @extend %burger-line;
+
+        content: "";
+        bottom: 0;
+    }
+
+    @include media-smaller-than-tablet {
+        width: 30px;
+    }
+
+    @include media-mobile {
+        margin-left: auto;
+    }
+}
+
+%burger-line {
+    position: absolute;
+    height: $burger-line-height;
+    width: 100%;
 }
 
 %active-nav-link {
@@ -142,7 +203,6 @@
 %button-small {
     width: 52px;
     height: 52px;
-
 }
 
 %button-small-text {
@@ -163,10 +223,14 @@
 
 %second-title {
     @extend %title;
-    font-size: 35px;
+    font-size: $second-title-font-size;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: $color-dark-l;
+
+    @include media-smaller-than-tablet {
+        font-size: max(25px, $second-title-font-size / $tablet-content-width * 100vw);
+    }
 }
 
 %about-text {
@@ -174,11 +238,20 @@
     font-family: $font-arial-normal;
     font-size: 15px;
     line-height: 160%;
+
+    @include media-smaller-than-tablet {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    @include media-mobile {
+        text-align: justify;
+    }
 }
 
 %third-title {
     @extend %title;
-    font-size: 20px;
+    font-size: $third-title-font-size;
     line-height: 115%;
     letter-spacing: 0.06em;
     color: $color-dark-l;

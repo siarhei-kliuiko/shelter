@@ -2,10 +2,10 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    width: 270px;
-    height: 435px;
+    height: $pet-card-height;
     border-radius: 9px;
     overflow: hidden;
+    flex: 0 0 $pet-card-width;
     background: $color-light-s;
     transition: background-color .2s, box-shadow .3s, filter .1s;
 

@@ -1,28 +1,108 @@
 .not-only {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 90px;
+    row-gap: 100px;
+    @include set-element-animation(row-gap);
+
+    @include media-smaller-than-desktop {
+        margin-top: max(60px, 7vw);
+    }
+
+    @include media-tablet {
+        justify-content: center;
+    }
+
+    @include media-smaller-than-tablet {
+        row-gap: 105px;
+    }
 }
 
-.not-only-content {
-    margin-top: 163px;
-    width: 460px;
+.not-only__content {
+    margin-top: $not-only__content-margin-top-desktop;
+    max-width: 460px;
     height: 322px;
+    flex: 1 1 310px;
+
+    @include media-smaller-than-desktop {
+        margin-top: calc($not-only__content-margin-top-desktop / $desktop-content-width) * 100vw;
+    }
+
+    @include media-tablet {
+        @include set-element-animation(margin-top);
+        margin-top: 0;
+    }
+
+    @include media-mobile {
+        height: 296px;
+    }
 }
 
-.not-only-title {
+.not-only__title {
     @extend %title;
     margin-top: 1px;
-    width: 310px;
-    font-size: 44px;
+    font-size: $not-only__title-font-size;
     line-height: 130%;
     color: $color-light-xl;
+
+    @include media-smaller-than-tablet {
+        font-size: max(25px, $not-only__title-font-size / $tablet-content-width * 100vw);
+        letter-spacing: 0.06em;
+    }
+
+    @include media-mobile {
+        text-align: center;
+        margin-left: 1px;
+        margin-top: 0;
+    }
 }
 
-.not-only-text {
+.not-only__text {
     margin: 41px 0 42px 0;
     font-family: $font-arial-normal;
     font-size: 15px;
     line-height: 160%;
     color: $color-dark-s;
+
+    @include media-mobile {
+        text-align: center;
+    }
+}
+
+.not-only__image {
+    margin-left: auto;
+
+    @include media-smaller-than-desktop {
+        width: max(569px, 58%);
+    }
+
+    @include media-tablet {
+        height: 593px;
+    }
+
+    @include media-smaller-than-tablet {
+        height: unset;
+        width: max($not-only__image-width-mobile, $not-only__image-width-tablet / $tablet-content-width * 100vw);
+    }
+
+    @include media-mobile {
+        margin-top: 0.24px;
+        height: 271.77px;
+    }
+}
+
+.not-only__button {
+    display: block;
+
+    @include media-tablet {
+        margin-left: 126px;
+    }
+
+    @include media-smaller-than-tablet {
+        margin: 0 auto;
+    }
+
+    @include media-mobile {
+        margin-left: 46px;
+    }
 }

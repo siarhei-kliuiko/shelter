@@ -1,30 +1,34 @@
 .start-screen-gradient-background-container {
-    height: 908px;
+    height: fit-content;
     background: url("assets/images/noise_transparent@2x.png"), radial-gradient(120% 220% at 0% 0%, #5B483A 0%, #262425 70%), #211F20;
 }
 
 .about-background-container {
-    height: 588px;
+    height: fit-content;
     background: $color-light-xl;
 }
 
 .our-friends-background-container {
-    height: 877px;
+    height: $our-friends-background-container-height-tablet;
     background: $color-light-l;
+
+    @include media-smaller-than-tablet {
+        height: max(791px, $our-friends-background-container-height-tablet / $tablet-content-width * 100vw);
+    }
 }
 
 .help-background-container {
-    height: 611px;
+    height: fit-content;
     background: $color-light-xl;
 }
 
 .in-addition-background-container {
-    height: 462px;
+    height: fit-content;
     background: $color-light-l;
 }
 
 .footer-gradient-background-container {
-    height: 350px;
+    height: fit-content;
     background: url(assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;;
 }
 
@@ -34,6 +38,6 @@
 }
 
 .pets-our-friends-background-container {
-    height: 1342px;
+    height: fit-content;
     background: $color-light-l;
 }

@@ -10,42 +10,94 @@
     @extend %second-title;
     position: relative;
     left: 1px;
-    width: 400px;
-    height: 90px;
     text-align: center;
+    height: 90px;
+
+    @include media-smaller-than-tablet {
+        height: unset;
+    }
+
+    @include media-mobile {
+        height: 64px;
+    }
 }
 
 .our-friends-slider {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 435px;
     width: 100%;
+
+    @include media-smaller-than-tablet {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        padding: 0 15px;
+        column-gap: 80px;
+    }
 }
 
 .our-friends-slider-button {
-    position: relative;
-    top: 1px;
+    @include media-smaller-than-tablet {
+        flex-wrap: wrap;
+        order: 1;
+    }
 }
 
-.our-friends-cards {
+.our-friends__cards-container {
+    width: $our-friends-cards-desktop-width;
     display: flex;
     justify-content: space-between;
-    width: 990px;
+    align-items: center;
+    overflow: hidden;
+
+    @include media-smaller-than-desktop {
+        width: max($our-friends-cards-tablet-width, $our-friends-cards-tablet-width / $our-friends-slider-tablet-width * 100%);
+        column-gap: max($our-friends-cards-tablet-column-gap, $our-friends-cards-tablet-column-gap / $our-friends-cards-tablet-width * 100%);
+    }
+
+    @include media-smaller-than-tablet {
+        width: max($pet-card-width, $our-friends-cards-tablet-width / $tablet-content-width * 100vw);
+    }
 }
 
 .our-friends-button {
-    position: relative;
-    left: 1px;
+    margin-left: 1px;
+
+    @include media-tablet {
+        margin-left: 0;
+    }
 }
 
-.pets-our-friends-slider {
-    height: 930px;
+.our-friends__cards-container_big {
+    padding: 15px 0;
+    margin: 45px 0;
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 30px;
+    @include set-element-animation(padding-top, padding-bottom, margin-top, margin-bottom);
+
+    @include media-smaller-than-desktop {
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        max-height: 1365px;
+        overflow-y: hidden;
+    }
+
+    @include media-smaller-than-tablet {
+        margin: 42px 0;
+    }
 }
 
 .pets-slider-controls {
     display: flex;
     justify-content: space-between;
-    width: 340px;
+    width: $pets-slider-controls-width;
+
+    @include media-smaller-than-tablet {
+        width: max(300px, calc($pets-slider-controls-width / $tablet-content-width * 100vw));
+    }
 }

@@ -1,0 +1,42 @@
+@mixin media-smaller-than-desktop {
+    @media screen and (max-width: ($desktop-content-width - 1px)) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+    @media screen and (max-width: $tablet-content-width) {
+        @content;
+    }
+}
+
+@mixin media-smaller-than-tablet {
+    @media screen and (max-width: ($tablet-content-width - 1px)) {
+        @content;
+    }
+}
+
+@mixin media-mobile {
+    @media screen and (max-width: $mobile-content-width) {
+        @content;
+    }
+}
+
+@mixin set-element-animation($properties...) {
+    $result: ();
+    @each $property in $properties {
+        $result: append($result, $property + " .6s", comma);
+    }
+
+    transition: $result;
+}
+
+@mixin create-styled-burger($color) {
+    @extend %burger;
+
+    & .burger__line,
+    &::before,
+    &::after {
+        background-color: $color;
+    }
+}

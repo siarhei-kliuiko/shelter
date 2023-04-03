@@ -26,3 +26,8 @@
         @extend %active-nav-link;
     }
 }
+
+.burger_dark {
+    @include create-styled-burger(#000000);
+    align-self: center;
+}

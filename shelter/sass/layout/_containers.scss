@@ -7,14 +7,32 @@
     @extend %container;
     padding-top: 80px;
     padding-bottom: 100px;
-}
+    @include set-element-animation(padding-top, padding-bottom);
 
-.in-addition-container {
-    padding-left: 183px;
-    padding-right: 182px;
+    @include media-smaller-than-tablet {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
 }
 
 .footer-container {
     @extend %container;
     padding-top: 40px;
+    @include set-element-animation(padding-top);
+
+    @include media-smaller-than-desktop {
+        padding-top: 30px;
+    }
+}
+
+.pets-our-friends-container {
+    @include set-element-animation(padding-bottom);
+
+    @include media-smaller-than-desktop {
+        padding-bottom: 76px;
+    }
+
+    @include media-smaller-than-tablet {
+        padding-bottom: 42px;
+    }
 }
