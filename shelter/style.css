@@ -659,6 +659,11 @@ ul {
     padding-bottom: 76px;
   }
 }
+@media screen and (max-width: 767px) {
+  .pets-our-friends-container {
+    padding-bottom: 42px;
+  }
+}
 
 .logo-and-menu {
   display: flex;
@@ -898,6 +903,17 @@ ul {
   position: relative;
   left: 1px;
   text-align: center;
+  height: 90px;
+}
+@media screen and (max-width: 767px) {
+  .our-friends-title {
+    height: unset;
+  }
+}
+@media screen and (max-width: 320px) {
+  .our-friends-title {
+    height: 64px;
+  }
 }
 
 .our-friends-slider {
@@ -970,11 +986,21 @@ ul {
     overflow-y: hidden;
   }
 }
+@media screen and (max-width: 767px) {
+  .our-friends__cards-container_big {
+    margin: 42px 0;
+  }
+}
 
 .pets-slider-controls {
   display: flex;
   justify-content: space-between;
   width: 340px;
+}
+@media screen and (max-width: 767px) {
+  .pets-slider-controls {
+    width: max(300px, 44.2708333333vw);
+  }
 }
 
 .help-content {

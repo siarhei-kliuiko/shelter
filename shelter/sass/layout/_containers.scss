@@ -31,4 +31,8 @@
     @include media-smaller-than-desktop {
         padding-bottom: 76px;
     }
+
+    @include media-smaller-than-tablet {
+        padding-bottom: 42px;
+    }
 }

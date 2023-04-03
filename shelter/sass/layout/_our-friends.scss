@@ -11,6 +11,15 @@
     position: relative;
     left: 1px;
     text-align: center;
+    height: 90px;
+
+    @include media-smaller-than-tablet {
+        height: unset;
+    }
+
+    @include media-mobile {
+        height: 64px;
+    }
 }
 
 .our-friends-slider {
@@ -77,10 +86,18 @@
         max-height: 1365px;
         overflow-y: hidden;
     }
+
+    @include media-smaller-than-tablet {
+        margin: 42px 0;
+    }
 }
 
 .pets-slider-controls {
     display: flex;
     justify-content: space-between;
-    width: 340px;
+    width: $pets-slider-controls-width;
+
+    @include media-smaller-than-tablet {
+        width: max(300px, calc($pets-slider-controls-width / $tablet-content-width * 100vw));
+    }
 }
