@@ -251,7 +251,7 @@
 
 %third-title {
     @extend %title;
-    font-size: 20px;
+    font-size: $third-title-font-size;
     line-height: 115%;
     letter-spacing: 0.06em;
     color: $color-dark-l;

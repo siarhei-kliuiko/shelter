@@ -981,7 +981,6 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   margin: 0 auto;
 }
 @media screen and (max-width: 1279px) {
@@ -989,27 +988,48 @@ ul {
     width: max(630px, 82.03125vw);
   }
 }
+@media screen and (max-width: 767px) {
+  .help-content {
+    width: max(290px, 82.03125vw);
+  }
+}
 
 .help-title {
   position: relative;
   left: 1px;
-  width: 380px;
-  height: 90px;
   text-align: center;
+}
+@media screen and (max-width: 320px) {
+  .help-title {
+    height: 64px;
+  }
 }
 
 .contributions-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 59px;
   column-gap: 120px;
   row-gap: 55px;
   list-style: none;
+  transition: margin-top .6s;
 }
 @media screen and (max-width: 1279px) {
   .contributions-list {
     column-gap: max(60px, 7.8125vw);
+  }
+}
+@media screen and (max-width: 767px) {
+  .contributions-list {
+    margin-top: 42px;
+    column-gap: max(30px, 7.8125vw);
+    row-gap: max(30px, 7.1614583333vw);
+  }
+}
+@media screen and (max-width: 320px) {
+  .contributions-list {
+    justify-content: space-between;
   }
 }
 
@@ -1025,36 +1045,84 @@ ul {
     width: 170px;
   }
 }
+@media screen and (max-width: 767px) {
+  .contribution-info {
+    width: max(130px, 22.1354166667vw);
+    height: max(87px, 14.7135416667vw);
+  }
+}
 
 .contribution-image {
   fill: #F1CDB3;
+}
+@media screen and (max-width: 767px) {
+  .contribution-image {
+    height: max(50px, 7.8125vw);
+    width: max(50px, 7.8125vw);
+  }
 }
 
 .contribution-title {
   white-space: nowrap;
 }
+@media screen and (max-width: 767px) {
+  .contribution-title {
+    font-size: max(15px, 2.6041666667vw);
+    line-height: 110%;
+  }
+}
 
 .pet-food .contribution-title {
   width: 82px;
+}
+@media screen and (max-width: 767px) {
+  .pet-food .contribution-title {
+    width: unset;
+  }
 }
 
 .transportation .contribution-image {
   position: relative;
   left: -1px;
 }
+@media screen and (max-width: 320px) {
+  .transportation .contribution-image {
+    position: unset;
+  }
+}
 .transportation .contribution-title {
   width: 150px;
+}
+@media screen and (max-width: 767px) {
+  .transportation .contribution-title {
+    width: unset;
+  }
 }
 
 .toys .contribution-title {
   width: 46px;
 }
+@media screen and (max-width: 767px) {
+  .toys .contribution-title {
+    width: unset;
+  }
+}
 
 .bowls .contribution-image {
   margin-top: 2px;
 }
+@media screen and (max-width: 320px) {
+  .bowls .contribution-image {
+    margin-top: unset;
+  }
+}
 .bowls .contribution-title {
   width: 153px;
+}
+@media screen and (max-width: 767px) {
+  .bowls .contribution-title {
+    width: unset;
+  }
 }
 
 .shampoos .contribution-image {
@@ -1064,29 +1132,54 @@ ul {
 .shampoos .contribution-title {
   width: 101px;
 }
+@media screen and (max-width: 767px) {
+  .shampoos .contribution-title {
+    width: unset;
+  }
+}
 
 .vitamins .contribution-image {
   margin-top: 3px;
   margin-left: -1px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
   .vitamins .contribution-image {
-    margin-left: 0;
+    margin: unset;
   }
 }
 .vitamins .contribution-title {
   width: 89px;
 }
+@media screen and (max-width: 767px) {
+  .vitamins .contribution-title {
+    width: unset;
+  }
+}
 
 .medicines .contribution-title {
   width: 101px;
+}
+@media screen and (max-width: 767px) {
+  .medicines .contribution-title {
+    width: unset;
+  }
 }
 
 .collars .contribution-image {
   margin-top: 4px;
 }
+@media screen and (max-width: 320px) {
+  .collars .contribution-image {
+    margin-top: unset;
+  }
+}
 .collars .contribution-title {
   width: 165px;
+}
+@media screen and (max-width: 767px) {
+  .collars .contribution-title {
+    width: unset;
+  }
 }
 
 .sleeping-areas .contribution-image {
@@ -1099,6 +1192,11 @@ ul {
 }
 .sleeping-areas .contribution-title {
   width: 143px;
+}
+@media screen and (max-width: 767px) {
+  .sleeping-areas .contribution-title {
+    width: unset;
+  }
 }
 
 .in-addition-content {

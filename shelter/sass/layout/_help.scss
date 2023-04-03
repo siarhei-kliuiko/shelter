@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     margin: 0 auto;
 
     @include media-smaller-than-desktop {
         width: max($help-content-tablet-width, $help-content-tablet-width / $tablet-content-width * 100vw);
+    }
+
+    @include media-smaller-than-tablet {
+        width: max(290px, $help-content-tablet-width / $tablet-content-width * 100vw);;
     }
 }
 
@@ -14,22 +17,35 @@
     @extend %second-title;
     position: relative;
     left: 1px;
-    width: 380px;
-    height: 90px;
     text-align: center;
+
+    @include media-mobile {
+        height: 64px;
+    }
 }
 
 .contributions-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 59px;
     column-gap: 120px;
-    row-gap: 55px;
+    row-gap: $contributions-list-row-gap;
     list-style: none;
+    @include set-element-animation(margin-top);
 
     @include media-smaller-than-desktop {
         column-gap: max($contributions-list-column-gap-tablet, $contributions-list-column-gap-tablet / $tablet-content-width * 100vw);
+    }
+
+    @include media-smaller-than-tablet {
+        margin-top: 42px;
+        column-gap: max($contributions-list-column-gap-mobile, $contributions-list-column-gap-tablet / $tablet-content-width * 100vw);
+        row-gap: max($contributions-list-row-gap-mobile, $contributions-list-row-gap / $tablet-content-width * 100vw);
+    }
+
+    @include media-mobile {
+        justify-content: space-between;
     }
 }
 
@@ -38,25 +54,44 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 113px;
+    height: $contribution-info-height;
 
     @include media-smaller-than-desktop {
-        width: 170px;
+        width: $contribution-info-width-tablet;
+    }
+
+    @include media-smaller-than-tablet {
+        width: max(130px, $contribution-info-width-tablet / $tablet-content-width * 100vw);
+        height: max(87px, $contribution-info-height / $tablet-content-width * 100vw);
     }
 }
 
 .contribution-image {
     fill: $color-primary;
+
+    @include media-smaller-than-tablet {
+        height: max(50px, 60px / $tablet-content-width * 100vw);
+        width: max(50px, 60px / $tablet-content-width * 100vw);
+    }
 }
 
 .contribution-title {
     @extend %third-title;
     white-space: nowrap;
+
+    @include media-smaller-than-tablet {
+        font-size: max(15px, $third-title-font-size / $tablet-content-width * 100vw);
+        line-height: 110%;
+    }
 }
 
 .pet-food {
     & .contribution-title {
         width: 82px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
 
@@ -64,26 +99,46 @@
     & .contribution-image {
         position: relative;
         left: -1px;
+
+        @include media-mobile {
+            position: unset;
+        }
     }
 
     & .contribution-title {
         width: 150px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
 
 .toys {
     & .contribution-title {
         width: 46px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
 
 .bowls {
     & .contribution-image {
         margin-top: 2px;
+
+        @include media-mobile {
+            margin-top: unset;
+        }
     }
 
     & .contribution-title {
         width: 153px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
 
@@ -95,6 +150,10 @@
 
     & .contribution-title {
         width: 101px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
 
@@ -103,29 +162,45 @@
         margin-top: 3px;
         margin-left: -1px;
 
-        @include media-tablet {
-            margin-left: 0;
+        @include media-mobile {
+            margin: unset;
         }
     }
 
     & .contribution-title {
         width: 89px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
 
 .medicines {
     & .contribution-title {
         width: 101px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
 
 .collars {
     & .contribution-image {
         margin-top: 4px;
+
+        @include media-mobile {
+            margin-top: unset;
+        }
     }
 
     & .contribution-title {
         width: 165px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
 
@@ -140,5 +215,9 @@
 
     & .contribution-title {
         width: 143px;
+
+        @include media-smaller-than-tablet {
+            width: unset;
+        }
     }
 }
