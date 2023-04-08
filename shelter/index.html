@@ -58,41 +58,28 @@
                 <div class="our-friends-content">
                     <h2 class="our-friends-title">Our friends who<br>are looking for a house</h2>
                     <div class="our-friends-slider">
-                        <button class="button-interactive-small-svg our-friends-slider-button">
+                        <button class="button-interactive-small-svg our-friends-slider-button" id="left">
                             <svg width="14" height="6" viewBox="0 0 14 6" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14 2V4H3V6L0 3L3 0V2H14Z"/>
+                                <path d="M14 2V4H3V6L0 3L3 0V2H14Z" />
                             </svg>
                         </button>
-                        <div class="our-friends__cards-container">
-                            <div class="pet-card">
-                                <img src="assets/images/pets-katrine.jpg" alt="Standing gray cat" height="270" width="270">
-                                <div class="pet-card-info">
-                                    <h3 class="pet-card-title">Katrine</h3>
-                                    <div class="pet-card-learn-more">Learn more</div>
-                                </div>
-                            </div>
-                            <div class="pet-card">
-                                <img src="assets/images/pets-jennifer.jpg" alt="Sitting creamy-white puppy" height="270" width="270">
-                                <div class="pet-card-info">
-                                    <h3 class="pet-card-title">Jennifer</h3>
-                                    <div class="pet-card-learn-more">Learn more</div>
-                                </div>
-                            </div>
-                            <div class="pet-card">
-                                <img src="assets/images/pets-woody.jpg" alt="Lying ginger dog" height="270" width="270">
-                                <div class="pet-card-info">
-                                    <h3 class="pet-card-title">Woody</h3>
-                                    <div class="pet-card-learn-more">Learn more</div>
+                        <div class="our-friends__slide-container">
+                            <div class="our-friends__slide-content">
+                                <div class="our-friends__slide-content__card-sets">
+                                    <div class = "our-friends__slide-content__card-set" id="left-set"></div>
+                                    <div class = "our-friends__slide-content__card-set" id="active-set"></div>
+                                    <div class = "our-friends__slide-content__card-set" id="right-set"></div>
                                 </div>
                             </div>
                         </div>
-                        <button class="button-interactive-small-svg our-friends-slider-button">
+                        <button class="button-interactive-small-svg our-friends-slider-button" id="right">
                             <svg width="14" height="6" viewBox="0 0 14 6" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z"/>
+                                <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" />
                             </svg>
                         </button>
                     </div>
-                    <form action="pets.html"><button class="button-interactive-wide our-friends-button">Get to know the rest</button></form>
+                    <form action="pets.html"><button class="button-interactive-wide our-friends-button">Get to know the
+                            rest</button></form>
                 </div>
             </section>
         </div>
@@ -241,6 +228,6 @@
             </div>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="pets_data.js"></script>
 </body>
 </html>

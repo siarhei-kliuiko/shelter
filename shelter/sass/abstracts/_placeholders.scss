@@ -5,12 +5,10 @@
     padding: 0 40px;
 
     @include media-smaller-than-desktop {
-        width: 100vw;
         padding: 0 max(30px, 3.125%);
     }
 
     @include media-smaller-than-tablet {
-        min-width: $mobile-content-width;
         padding: 0 max(10px, $container-mobile-left-right-padding / $mobile-content-width * 100%);
     }
 }

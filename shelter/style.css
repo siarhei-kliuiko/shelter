@@ -6,13 +6,11 @@
 }
 @media screen and (max-width: 1279px) {
   .footer-container, .main-container, .header-container {
-    width: 100vw;
     padding: 0 max(30px, 3.125%);
   }
 }
 @media screen and (max-width: 767px) {
   .footer-container, .main-container, .header-container {
-    min-width: 320px;
     padding: 0 max(10px, 3.125%);
   }
 }
@@ -570,8 +568,7 @@ html {
 }
 
 body {
-  display: inline-block;
-  min-width: 100%;
+  min-width: 320px;
   font-family: "Georgia", serif;
 }
 
@@ -939,23 +936,43 @@ ul {
   }
 }
 
-.our-friends__cards-container {
+.our-friends__slide-container {
   width: 990px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
 }
 @media screen and (max-width: 1279px) {
-  .our-friends__cards-container {
+  .our-friends__slide-container {
     width: max(580px, 81.9209039548%);
-    column-gap: max(40px, 6.8965517241%);
   }
 }
 @media screen and (max-width: 767px) {
-  .our-friends__cards-container {
+  .our-friends__slide-container {
     width: max(270px, 75.5208333333vw);
   }
+}
+
+.our-friends__slide-content {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.our-friends__slide-content__card-sets {
+  position: relative;
+  display: flex;
+}
+
+.our-friends__slide-content__card-set {
+  display: flex;
+  column-gap: 90px;
+}
+@media screen and (max-width: 1279px) {
+  .our-friends__slide-content__card-set {
+    column-gap: 40px;
+  }
+}
+
+.our-friends__slide-content__card-set__slide-transition {
+  transition: left .6s;
 }
 
 .our-friends-button {
@@ -1511,6 +1528,10 @@ ul {
 .pet-card-title {
   position: relative;
   left: 1px;
+}
+
+.pet-card-hidden {
+  display: none;
 }
 
 .logo-bright .logo-title {
