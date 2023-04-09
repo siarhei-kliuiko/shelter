@@ -91,6 +91,7 @@
     position: relative;
     width: 0;
     height: 22px;
+    z-index: 4;
     @include set-element-animation(width);
 
     & .burger__line {
@@ -200,8 +201,8 @@
 }
 
 %button-small {
-    width: 52px;
-    height: 52px;
+    width: $button-small-width-height;
+    height: $button-small-width-height;
 }
 
 %button-small-text {
@@ -221,15 +222,19 @@
 }
 
 %second-title {
-    @extend %title;
-    font-size: $second-title-font-size;
-    line-height: 130%;
-    letter-spacing: 0.06em;
+    @extend %second-title-static;
     color: $color-dark-l;
 
     @include media-smaller-than-tablet {
         font-size: max(25px, $second-title-font-size / $tablet-content-width * 100vw);
     }
+}
+
+%second-title-static {
+    @extend %title;
+    font-size: $second-title-font-size;
+    line-height: 130%;
+    letter-spacing: 0.06em;
 }
 
 %about-text {

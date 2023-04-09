@@ -138,3 +138,10 @@ function slideTransitionComplete(event) {
         SLIDER_BUTTON_RIGHT.addEventListener("click", sliderSlide);
     }
 }
+
+SLIDE.addEventListener("click", (event)=> {
+    const clickedCard = event.target.closest(".pet-card");
+    if(clickedCard) {
+        showOverlay(createPetPopup(clickedCard.dataset.id));
+    }
+})

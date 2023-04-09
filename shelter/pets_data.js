@@ -114,3 +114,63 @@ function createPetCard(petInfo, index) {
     card.dataset.id = index;
     return card;
 }
+
+function createPetPopup(petId) {
+    const popup = document.createElement("div");
+    popup.className = "popup";
+    const closeButton = document.createElement("button");
+    closeButton.classList.add("popup__close-button");
+    closeButton.classList.add("button-interactive-small-svg");
+    closeButton.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12"><use xlink:href="assets/svg/cross.svg#cross"/></svg>';
+    popup.append(closeButton);
+    const popupContent = document.createElement("div");
+    popupContent.className = "popup__content";
+    popupContent.addEventListener("click", event => event.stopPropagation());
+    const image = document.createElement("img");
+    image.className = "popup__image";
+    image.src = PETS_DATA[petId].img.source;
+    image.alt = PETS_DATA[petId].img.description;
+    popupContent.append(image);
+    const textContent = document.createElement("div");
+    textContent.className = "popup__text-content";
+    const petName = document.createElement("h3");
+    petName.className = "popup__pet-name";
+    petName.textContent = PETS_DATA[petId].name;
+    textContent.append(petName);
+    const petBreed = document.createElement("h2");
+    petBreed.className = "popup__pet-breed";
+    petBreed.textContent = PETS_DATA[petId].type + " - " + PETS_DATA[petId].breed;
+    textContent.append(petBreed);
+    const petDescription = document.createElement("p");
+    petDescription.className = "popup__pet-description";
+    petDescription.textContent = PETS_DATA[petId].description;
+    textContent.append(petDescription);
+    const createDescriptionListElement = (elementTitle, info) => {
+        const listElement = document.createElement("li");
+        listElement.className = "popup__description-list__element";
+        const listDot = document.createElement("span");
+        listDot.className = "popup__description-list__element__dot";
+        listElement.append(listDot);
+        const listText = document.createElement("span");
+        listText.className = "popup__description-list__element__text";
+        const title = document.createElement("span");
+        title.className = "popup__description-list__element__text__title";
+        title.textContent = elementTitle + ":";
+        listText.append(title);
+        const infoText = document.createTextNode(" " + (Array.isArray(info) ? info.join(", ") : info));
+        listText.append(infoText);
+        listElement.append(listText);
+        return listElement;
+    }
+
+    const descriptionList = document.createElement("ul");
+    descriptionList.className = "popup__description-list";
+    descriptionList.append(createDescriptionListElement("age", PETS_DATA[petId].age));
+    descriptionList.append(createDescriptionListElement("inoculations", PETS_DATA[petId].inoculations));
+    descriptionList.append(createDescriptionListElement("diseases", PETS_DATA[petId].diseases));
+    descriptionList.append(createDescriptionListElement("parasites", PETS_DATA[petId].parasites));
+    textContent.append(descriptionList);
+    popupContent.append(textContent);
+    popup.append(popupContent);
+    return popup;
+}

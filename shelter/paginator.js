@@ -115,3 +115,10 @@ function switchButtonsState(pageNumber) {
         BUTTON_FIRST.className = BUTTON_PREV.className = BUTTON_NEXT.className = BUTTON_LAST.className = "button-interactive-small-text";
     }
 }
+
+CARDS_CONTAINER.addEventListener("click", (event)=> {
+    const clickedCard = event.target.closest(".pet-card");
+    if(clickedCard) {
+        showOverlay(createPetPopup(clickedCard.dataset.id));
+    }
+})
