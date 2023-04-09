@@ -165,6 +165,7 @@
 }
 
 .button-active-small-text {
+  pointer-events: none;
   background-color: #F1CDB3;
 }
 
@@ -984,38 +985,51 @@ ul {
   }
 }
 
-.our-friends__cards-container_big {
+.our-friends__paginator-content {
   padding: 15px 0;
   margin: 45px 0;
+  height: 930px;
+  width: 100%;
+  overflow: hidden;
+  transition: padding-top .6s, padding-bottom .6s, margin-top .6s, margin-bottom .6s;
+}
+@media screen and (max-width: 1279px) {
+  .our-friends__paginator-content {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .our-friends__paginator-content {
+    height: 1395px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .our-friends__paginator-content {
+    margin: 27px 0;
+  }
+}
+
+.our-friends__cards-container_big {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 40px;
   row-gap: 30px;
-  transition: padding-top .6s, padding-bottom .6s, margin-top .6s, margin-bottom .6s;
-}
-@media screen and (max-width: 1279px) {
-  .our-friends__cards-container_big {
-    padding: 0;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    max-height: 1365px;
-    overflow-y: hidden;
-  }
-}
-@media screen and (max-width: 767px) {
-  .our-friends__cards-container_big {
-    margin: 42px 0;
-  }
 }
 
-.pets-slider-controls {
+.our-friends__cards-container_big_tablet-height {
+  height: 1395px;
+}
+
+.our-friends__paginator-buttons {
   display: flex;
   justify-content: space-between;
   width: 340px;
 }
 @media screen and (max-width: 767px) {
-  .pets-slider-controls {
+  .our-friends__paginator-buttons {
     width: max(300px, 44.2708333333vw);
   }
 }

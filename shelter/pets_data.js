@@ -90,6 +90,7 @@ const PETS_DATA = [
 ];
 
 const CARD_WIDTH = 270;
+const CARD_HEIGHT = 435;
 
 function createPetCard(petInfo, index) {
     let card = document.createElement("div");

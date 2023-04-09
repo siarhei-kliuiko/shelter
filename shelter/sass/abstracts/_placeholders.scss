@@ -189,6 +189,7 @@
 
 %button-active {
     @extend %button;
+    pointer-events: none;
     background-color: $color-primary;
 }
 

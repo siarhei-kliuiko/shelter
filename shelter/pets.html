@@ -37,70 +37,15 @@
             <section class="main-container pets-our-friends-container" id="our-friends">
                 <div class="our-friends-content">
                     <h1 class="our-friends-title">Our friends who<br>are looking for a house</h1>
-                    <div class="our-friends__cards-container_big">
-                        <div class="pet-card">
-                            <img src="assets/images/pets-katrine.jpg" alt="Standing gray cat" height="270" width="270">
-                            <div class="pet-card-info">
-                                <h3 class="pet-card-title">Katrine</h3>
-                                <div class="pet-card-learn-more">Learn more</div>
-                            </div>
-                        </div>
-                        <div class="pet-card">
-                            <img src="assets/images/pets-jennifer.jpg" alt="Sitting creamy-white puppy" height="270" width="270">
-                            <div class="pet-card-info">
-                                <h3 class="pet-card-title">Jennifer</h3>
-                                <div class="pet-card-learn-more">Learn more</div>
-                            </div>
-                        </div>
-                        <div class="pet-card">
-                            <img src="assets/images/pets-woody.jpg" alt="Lying ginger dog" height="270" width="270">
-                            <div class="pet-card-info">
-                                <h3 class="pet-card-title">Woody</h3>
-                                <div class="pet-card-learn-more">Learn more</div>
-                            </div>
-                        </div>
-                        <div class="pet-card">
-                            <img src="assets/images/pets-sophia.jpg" alt="Small black and white puppy" height="270" width="270">
-                            <div class="pet-card-info">
-                                <h3 class="pet-card-title">Sophia</h3>
-                                <div class="pet-card-learn-more">Learn more</div>
-                            </div>
-                        </div>
-                        <div class="pet-card">
-                            <img src="assets/images/pets-timmy.jpg" alt="Sitting light-gray cat" height="270" width="270">
-                            <div class="pet-card-info">
-                                <h3 class="pet-card-title">Timmy</h3>
-                                <div class="pet-card-learn-more">Learn more</div>
-                            </div>
-                        </div>
-                        <div class="pet-card">
-                            <img src="assets/images/pets-charly.jpg" alt="Lying brown and white dog" height="270" width="270">
-                            <div class="pet-card-info">
-                                <h3 class="pet-card-title">Charly</h3>
-                                <div class="pet-card-learn-more">Learn more</div>
-                            </div>
-                        </div>
-                        <div class="pet-card">
-                            <img src="assets/images/pets-scarlet.jpg" alt="Standing brown and white puppy" height="270" width="270">
-                            <div class="pet-card-info">
-                                <h3 class="pet-card-title">Scarlett</h3>
-                                <div class="pet-card-learn-more">Learn more</div>
-                            </div>
-                        </div>
-                        <div class="pet-card">
-                            <img src="assets/images/pets-freddie.jpg" alt="Sitting white and gray-striped cat" height="270" width="270">
-                            <div class="pet-card-info">
-                                <h3 class="pet-card-title">Freddie</h3>
-                                <div class="pet-card-learn-more">Learn more</div>
-                            </div>
-                        </div>
+                    <div class="our-friends__paginator-content">
+                        <div class="our-friends__cards-container_big"></div>
                     </div>
-                    <div class="pets-slider-controls">
-                        <button disabled class="button-inactive-small-text">&lt;&lt;</button>
-                        <button disabled class="button-inactive-small-text">&lt;</button>
-                        <button class="button-active-small-text">1</button>
-                        <button class="button-interactive-small-text">&gt;</button>
-                        <button class="button-interactive-small-text">&gt;&gt;</button>
+                    <div class="our-friends__paginator-buttons">
+                        <button class="button-inactive-small-text" id="first">&lt;&lt;</button>
+                        <button class="button-inactive-small-text" id="prev">&lt;</button>
+                        <button class="button-active-small-text" id="page">1</button>
+                        <button class="button-interactive-small-text" id="next">&gt;</button>
+                        <button class="button-interactive-small-text" id="last">&gt;&gt;</button>
                     </div>
                 </div>
             </section>
@@ -137,6 +82,7 @@
             </div>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="pets_data.js"></script>
+    <script src="paginator.js"></script>
 </body>
 </html>

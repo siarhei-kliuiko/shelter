@@ -88,30 +88,42 @@
     }
 }
 
-.our-friends__cards-container_big {
+.our-friends__paginator-content {
     padding: 15px 0;
     margin: 45px 0;
+    height: 930px;
+    width: 100%;
+    overflow: hidden;
+    @include set-element-animation(padding-top, padding-bottom, margin-top, margin-bottom);
+
+    @include media-smaller-than-desktop {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    @include media-tablet {
+        height: $paginator-tablet-height;
+    }
+
+    @include media-smaller-than-tablet {
+        margin: 27px 0;
+    }
+}
+
+.our-friends__cards-container_big {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 40px;
     row-gap: 30px;
-    @include set-element-animation(padding-top, padding-bottom, margin-top, margin-bottom);
-
-    @include media-smaller-than-desktop {
-        padding: 0;
-        margin-top: 30px;
-        margin-bottom: 40px;
-        max-height: 1365px;
-        overflow-y: hidden;
-    }
-
-    @include media-smaller-than-tablet {
-        margin: 42px 0;
-    }
 }
 
-.pets-slider-controls {
+.our-friends__cards-container_big_tablet-height {
+    height: $paginator-tablet-height;
+}
+
+.our-friends__paginator-buttons {
     display: flex;
     justify-content: space-between;
     width: $pets-slider-controls-width;
