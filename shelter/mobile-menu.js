@@ -8,7 +8,6 @@ BURGER.addEventListener("click", toggleMobileMenuVisibility);
 MENU.addEventListener("transitionstart", (event) => {
     if (event.target === MENU && event.propertyName === "width") {
         if (MENU.classList.contains("nav-menu_mobile") && MENU.offsetWidth < 10 && BURGER.offsetWidth) {
-            console.log(MENU.offsetWidth);
             setMobileMenuTheme();
             MENU.addEventListener("click", menuElementClicked);
         }
