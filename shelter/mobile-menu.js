@@ -58,7 +58,7 @@ function toggleMobileMenuVisibility() {
     BURGER.removeEventListener("click", toggleMobileMenuVisibility);
     MENU.classList.toggle("nav-menu_hidden");
     BURGER.classList.toggle("burger_rotated");
-    if (overlay) {
+    if (overlay && !MENU.classList.contains("nav-menu_hidden")) {
         removeOverlay();
     } else {
         showOverlay(null, mobileMenuOverlayClicked);
@@ -79,7 +79,7 @@ BURGER.addEventListener("transitionstart", (event) => {
     if (event.target === BURGER && event.propertyName === "width" && BURGER.offsetWidth) {
         MENU.classList.add("nav-menu_hidden");
         BURGER.classList.remove("burger_rotated");
-        if (overlay) {
+        if (overlay && !document.querySelector(".popup")) {
             removeOverlay();
         }
     }
