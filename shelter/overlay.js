@@ -1,6 +1,6 @@
 let overlay;
 
-function showOverlay(content = null) {
+function showOverlay(content = null, clickEventCallBack = closeOverlay) {
     overlay = document.createElement("div");
     overlay.classList.add("overlay");
     if (content) {
@@ -16,12 +16,15 @@ function showOverlay(content = null) {
     }
 
     document.body.prepend(overlay);
-    overlay.addEventListener("click", closeOverlay);
+    overlay.addEventListener("click", clickEventCallBack);
 }
 
-function closeOverlay(event) {
+function closeOverlay() {
+    if (overlay) {
         overlay.removeEventListener("click", closeOverlay);
         overlay.remove();
+        overlay = null;
         document.body.classList.toggle("scroll-disable");
         document.body.style.paddingRight = "";
+    }
 }

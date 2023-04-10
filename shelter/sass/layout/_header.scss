@@ -1,6 +1,7 @@
 .logo-and-menu {
     display: flex;
     align-items: start;
+    justify-content: space-between;
     @include set-element-animation(margin);
 
     @include media-smaller-than-tablet {

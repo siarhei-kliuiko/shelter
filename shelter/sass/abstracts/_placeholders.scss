@@ -11,6 +11,10 @@
     @include media-smaller-than-tablet {
         padding: 0 max(10px, $container-mobile-left-right-padding / $mobile-content-width * 100%);
     }
+
+    @include media-semi-mobile {
+        padding: 0 10px;
+    }
 }
 
 %logo {
@@ -92,7 +96,7 @@
     width: 0;
     height: 22px;
     z-index: 4;
-    @include set-element-animation(width);
+    @include set-element-animation(width, transform);
 
     & .burger__line {
         @extend %burger-line;
@@ -123,6 +127,8 @@
 }
 
 %burger-line {
+    @include set-element-animation(width, transform, background-color);
+
     position: absolute;
     height: $burger-line-height;
     width: 100%;
@@ -221,6 +227,13 @@
     align-items: center;
 }
 
+%second-title-static {
+    @extend %title;
+    font-size: $second-title-font-size;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
 %second-title {
     @extend %second-title-static;
     color: $color-dark-l;
@@ -228,13 +241,6 @@
     @include media-smaller-than-tablet {
         font-size: max(25px, $second-title-font-size / $tablet-content-width * 100vw);
     }
-}
-
-%second-title-static {
-    @extend %title;
-    font-size: $second-title-font-size;
-    line-height: 130%;
-    letter-spacing: 0.06em;
 }
 
 %about-text {

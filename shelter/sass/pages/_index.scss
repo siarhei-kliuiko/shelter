@@ -15,24 +15,19 @@
 
 }
 
-.nav-menu-bright {
+.nav-menu_bright {
     @extend %nav-menu;
 
     & .nav-link {
         color: $color-dark-s;
     }
 
-    & .nav-list> :first-child .nav-link,
+    & .nav-list .nav-link_active,
     & .nav-link:hover {
         color: $color-light-s;
     }
 
-    & .nav-list > :first-child .nav-link {
+    & .nav-list .nav-link_active {
         @extend %active-nav-link;
     }
-}
-
-.burger_bright {
-    @include create-styled-burger($color-primary);
-    align-self: center;
 }
