@@ -44,21 +44,40 @@
     }
 }
 
-.our-friends__cards-container {
+.our-friends__slide-container {
     width: $our-friends-cards-desktop-width;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
 
     @include media-smaller-than-desktop {
         width: max($our-friends-cards-tablet-width, $our-friends-cards-tablet-width / $our-friends-slider-tablet-width * 100%);
-        column-gap: max($our-friends-cards-tablet-column-gap, $our-friends-cards-tablet-column-gap / $our-friends-cards-tablet-width * 100%);
     }
 
     @include media-smaller-than-tablet {
         width: max($pet-card-width, $our-friends-cards-tablet-width / $tablet-content-width * 100vw);
     }
+}
+
+.our-friends__slide-content {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.our-friends__slide-content__card-sets {
+    position: relative;
+    display: flex;
+}
+
+.our-friends__slide-content__card-set {
+    display: flex;
+    column-gap: $our-friends-cards-desktop-column-gap;
+
+    @include media-smaller-than-desktop {
+        column-gap: $our-friends-cards-tablet-column-gap;
+    }
+}
+
+.our-friends__slide-content__card-set__slide-transition {
+    @include set-element-animation(left);
 }
 
 .our-friends-button {
@@ -69,30 +88,42 @@
     }
 }
 
-.our-friends__cards-container_big {
+.our-friends__paginator-content {
     padding: 15px 0;
     margin: 45px 0;
+    height: 930px;
+    width: 100%;
+    overflow: hidden;
+    @include set-element-animation(padding-top, padding-bottom, margin-top, margin-bottom);
+
+    @include media-smaller-than-desktop {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+
+    @include media-tablet {
+        height: $paginator-tablet-height;
+    }
+
+    @include media-smaller-than-tablet {
+        margin: 27px 0;
+    }
+}
+
+.our-friends__cards-container_big {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 40px;
     row-gap: 30px;
-    @include set-element-animation(padding-top, padding-bottom, margin-top, margin-bottom);
-
-    @include media-smaller-than-desktop {
-        padding: 0;
-        margin-top: 30px;
-        margin-bottom: 40px;
-        max-height: 1365px;
-        overflow-y: hidden;
-    }
-
-    @include media-smaller-than-tablet {
-        margin: 42px 0;
-    }
 }
 
-.pets-slider-controls {
+.our-friends__cards-container_big_tablet-height {
+    height: $paginator-tablet-height;
+}
+
+.our-friends__paginator-buttons {
     display: flex;
     justify-content: space-between;
     width: $pets-slider-controls-width;

@@ -1,0 +1,48 @@
+.burger_dark {
+    @include create-styled-burger(#000000);
+    align-self: center;
+}
+
+.burger_bright {
+    @include create-styled-burger($color-primary);
+    align-self: center;
+}
+
+.burger_rotated {
+    margin-right: 1px;
+    transform: rotate(90deg);
+}
+
+.nav-menu_mobile {
+    @extend %nav-menu;
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 0;
+    width: 320px;
+    z-index: 3;
+    height: 100vh;
+
+    & .nav-list {
+        width: 320px;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 40px;
+
+        & .nav-link {
+            font-size: 32px;
+            line-height: 160%;
+
+            &::after {
+                bottom: -10px;
+            }
+        }
+    }
+}
+
+.nav-menu_hidden {
+    width: 0px;
+}

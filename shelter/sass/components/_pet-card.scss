@@ -41,3 +41,7 @@
     @extend %button;
     @extend %button-wide;
 }
+
+.pet-card-hidden {
+    display: none;
+}

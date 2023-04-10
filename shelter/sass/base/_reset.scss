@@ -7,8 +7,7 @@ html {
 }
 
 body {
-    display: inline-block;
-    min-width: 100%;
+    min-width: $mobile-content-width;
     font-family: "Georgia", serif;
 }
 

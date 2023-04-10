@@ -9,6 +9,8 @@ $color-dark-l: #545454;
 $color-light-l: #F6F6F6;
 $color-dark-xl: #4C4C4C;
 $color-dark-m: #B2B2B2;
+$color-overlay: #00000099;
+$color-popup-text: #000000;
 
 $desktop-content-width: 1280px;
 $tablet-content-width: 768px;
@@ -17,9 +19,10 @@ $mobile-content-width: 320px;
 $pet-card-width: 270px;
 $pet-card-height: 435px;
 
-$our-friends-cards-desktop-width: $pet-card-width * 3 + 90px * 2;
-$our-friends-slider-tablet-width: 708px;
+$our-friends-cards-desktop-column-gap: 90px;
 $our-friends-cards-tablet-column-gap: 40px;
+$our-friends-cards-desktop-width: $pet-card-width * 3 + $our-friends-cards-desktop-column-gap * 2;
+$our-friends-slider-tablet-width: 708px;
 $our-friends-cards-tablet-width: $pet-card-width * 2 + $our-friends-cards-tablet-column-gap;
 
 $help-content-tablet-width: 630px;
@@ -55,3 +58,7 @@ $in-addition-content__donation-puppy-width: 505px;
 $footer-content__image-width: 300px;
 
 $pets-slider-controls-width: 340px;
+
+$paginator-tablet-height: 1395px;
+
+$button-small-width-height: 52px;
