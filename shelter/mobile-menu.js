@@ -58,7 +58,7 @@ function toggleMobileMenuVisibility() {
     BURGER.removeEventListener("click", toggleMobileMenuVisibility);
     MENU.classList.toggle("nav-menu_hidden");
     BURGER.classList.toggle("burger_rotated");
-    if (overlay && !MENU.classList.contains("nav-menu_hidden")) {
+    if (overlay) {
         removeOverlay();
     } else {
         showOverlay(null, mobileMenuOverlayClicked);
