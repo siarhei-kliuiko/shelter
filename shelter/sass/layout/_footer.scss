@@ -49,6 +49,7 @@
 .contacts-title {
     @extend %second-title;
     height: 90px;
+    letter-spacing: 0.059em;
     color: $color-light-xl;
 
     @include media-smaller-than-tablet {
